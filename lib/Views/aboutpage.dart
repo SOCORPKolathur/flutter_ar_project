@@ -47,7 +47,7 @@ class _AboutPageState extends State<AboutPage> {
         child: Column(
           children: [
             VisibilityDetector(
-              key: Key('my-widget-key'),
+              key: const Key('my-widget-key'),
               onVisibilityChanged: (visibilityInfo) {
                 var visiblePercentage = visibilityInfo.visibleFraction * 100;
                 if (visiblePercentage > 20) {
@@ -64,7 +64,7 @@ class _AboutPageState extends State<AboutPage> {
                   Container(
                     height: height/0.94,
                     width: double.infinity,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xffF3F7FE),
                     ),
                     child: Stack(
@@ -87,14 +87,14 @@ class _AboutPageState extends State<AboutPage> {
                                   Text(
                                     "About ",
                                     style: GoogleFonts.sofiaSans(
-                                        color: Color(0xff1666AD),
+                                        color: const Color(0xff1666AD),
                                         fontSize: 56,
                                         fontWeight: FontWeight.w800),
                                   ),
                                   Text(
                                     "Us",
                                     style: GoogleFonts.sofiaSans(
-                                        color: Color(0xff151515),
+                                        color: const Color(0xff151515),
                                         fontSize: 56,
                                         fontWeight: FontWeight.w800),
                                   ),
@@ -105,7 +105,7 @@ class _AboutPageState extends State<AboutPage> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: width/2.03, top: height/4.93),
-                          child: CircleAvatar(
+                          child: const CircleAvatar(
                             radius: 50,
                             backgroundColor: Color(0xffFFD670),
                           ),
@@ -118,7 +118,7 @@ class _AboutPageState extends State<AboutPage> {
                               height: height/9.15,
                               width: width / 4.55,
                               decoration: BoxDecoration(
-                                  color: Color(0xff8AC6FB),
+                                  color: const Color(0xff8AC6FB),
                                   borderRadius: BorderRadius.circular(60)),
                               child: Padding(
                                 padding: EdgeInsets.only( right: width/13.66),
@@ -129,7 +129,7 @@ class _AboutPageState extends State<AboutPage> {
                                       child: Text(
                                         "830 +",
                                         style: GoogleFonts.sofiaSans(
-                                            color: Color(0xff151515),
+                                            color: const Color(0xff151515),
                                             fontSize: 20,
                                             fontWeight: FontWeight.w800),
                                       ),
@@ -138,7 +138,7 @@ class _AboutPageState extends State<AboutPage> {
                                       "Positive Reviews",
                                       style: GoogleFonts.sofiaSans(
                                         color:
-                                            Color(0xff151515).withOpacity(.3),
+                                            const Color(0xff151515).withOpacity(.3),
                                         fontSize: 14,
                                       ),
                                     ),
@@ -156,7 +156,7 @@ class _AboutPageState extends State<AboutPage> {
                               height: height / 6.41,
                               width: width/3.41,
                               decoration: BoxDecoration(
-                                  color: Color(0xffFEB5E7),
+                                  color: const Color(0xffFEB5E7),
                                   borderRadius: BorderRadius.circular(60)),
                               child: Padding(
                                 padding: EdgeInsets.only(
@@ -166,7 +166,7 @@ class _AboutPageState extends State<AboutPage> {
                                     Text(
                                       "3.5 ",
                                       style: GoogleFonts.sofiaSans(
-                                          color: Color(0xff151515),
+                                          color: const Color(0xff151515),
                                           fontSize: 40,
                                           fontWeight: FontWeight.w800),
                                     ),
@@ -177,7 +177,7 @@ class _AboutPageState extends State<AboutPage> {
                                         "Years Experience",
                                         style: GoogleFonts.sofiaSans(
                                           color:
-                                              Color(0xff151515).withOpacity(.3),
+                                              const Color(0xff151515).withOpacity(.3),
                                           fontSize: 14,
                                         ),
                                       ),
@@ -196,7 +196,7 @@ class _AboutPageState extends State<AboutPage> {
                             child: Container(
                               height: height/8.01,
                               width: width / 4.55,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Color(0xff1666AD),
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(100),
@@ -213,7 +213,7 @@ class _AboutPageState extends State<AboutPage> {
                                       child: Text(
                                         "3.5 ",
                                         style: GoogleFonts.sofiaSans(
-                                            color: Color(0xffFFFFFF),
+                                            color: const Color(0xffFFFFFF),
                                             fontSize: 18,
                                             fontWeight: FontWeight.w800),
                                       ),
@@ -225,7 +225,7 @@ class _AboutPageState extends State<AboutPage> {
                                         "Project Challenges",
                                         style: GoogleFonts.sofiaSans(
                                           color:
-                                              Color(0xffFFFFFF).withOpacity(.3),
+                                              const Color(0xffFFFFFF).withOpacity(.3),
                                           fontSize: 16,
                                         ),
                                       ),
@@ -279,26 +279,26 @@ class _AboutPageState extends State<AboutPage> {
                   ),
                   Padding(
                       padding: EdgeInsets.only(left: width / 1.95, top: height/21.36),
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         radius: 10,
                         backgroundColor: Color(0xffDBECFA),
                       )),
                   Padding(
                       padding: EdgeInsets.only(
                           left: width / 1.51, top: height / 10.68),
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         radius: 17,
                         backgroundColor: Color(0xffDBECFA),
                       )),
                   Padding(
                       padding: EdgeInsets.only(left: width / 27.32, top: height/3.37),
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         radius: 23,
                         backgroundColor: Color(0xffDBECFA),
                       )),
                   Padding(
                       padding: EdgeInsets.only(top: height / 1.28),
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         radius: 33,
                         backgroundColor: Color(0xffDBECFA),
                       )),
@@ -356,7 +356,7 @@ class _AboutPageState extends State<AboutPage> {
                                   "we offer a comprehensive range of management systems designed to streamline "
                                   "operations and elevate performance.",
                                   style: GoogleFonts.sofiaSans(
-                                    color: Color(0xff151515),
+                                    color: const Color(0xff151515),
                                     fontSize: 20,
                                   ),
                                 )),
@@ -375,7 +375,7 @@ class _AboutPageState extends State<AboutPage> {
                                     " and we strive to empower them with cutting-edge tools to "
                                     "succeed in today's competitive environment",
                                     style: GoogleFonts.sofiaSans(
-                                      color: Color(0xff151515),
+                                      color: const Color(0xff151515),
                                       fontSize: 20,
                                     ),
                                   )),
@@ -393,7 +393,7 @@ class _AboutPageState extends State<AboutPage> {
                                     "organize events and memberships, or a reliable Online Attendance Management "
                                     "System to track attendance effortlessly, AR Digital Solutions has you covered.",
                                     style: GoogleFonts.sofiaSans(
-                                      color: Color(0xff151515),
+                                      color: const Color(0xff151515),
                                       fontSize: 20,
                                     ),
                                   )),
@@ -411,7 +411,7 @@ class _AboutPageState extends State<AboutPage> {
                                     "that exceed expectations. We prioritize customer satisfaction and are"
                                     " dedicated to providing exceptional support every step of the way.",
                                     style: GoogleFonts.sofiaSans(
-                                      color: Color(0xff151515),
+                                      color: const Color(0xff151515),
                                       fontSize: 20,
                                     ),
                                   )),
@@ -510,7 +510,7 @@ class _AboutPageState extends State<AboutPage> {
                                 child: Text(
                                   "TESTIMONIALS",
                                   style: GoogleFonts.sofiaSans(
-                                      color: Color(0xff1666AD),
+                                      color: const Color(0xff1666AD),
                                       fontSize: 20,
                                       fontWeight: FontWeight.w800),
                                 ),
@@ -526,21 +526,21 @@ class _AboutPageState extends State<AboutPage> {
                               Text(
                                 "What our",
                                 style: GoogleFonts.sofiaSans(
-                                    color: Color(0xff151515),
+                                    color: const Color(0xff151515),
                                     fontSize: 40,
                                     fontWeight: FontWeight.w800),
                               ),
                               Text(
                                 " happy client ",
                                 style: GoogleFonts.sofiaSans(
-                                    color: Color(0xff1666AD),
+                                    color: const Color(0xff1666AD),
                                     fontSize: 40,
                                     fontWeight: FontWeight.w800),
                               ),
                               Text(
                                 "say",
                                 style: GoogleFonts.sofiaSans(
-                                    color: Color(0xff151515),
+                                    color: const Color(0xff151515),
                                     fontSize: 40,
                                     fontWeight: FontWeight.w800),
                               ),
@@ -552,11 +552,13 @@ class _AboutPageState extends State<AboutPage> {
                           child: Text(
                             "Several selected clients, who already believe in our service.",
                             style: GoogleFonts.sofiaSans(
-                                color: Color(0xff151515).withOpacity(.3),
+                                color: const Color(0xff151515).withOpacity(.3),
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500),
                           ),
                         ),
+
+
                         Padding(
                           padding: EdgeInsets.only(
                               top: height / 12.82, left: width / 9.10),
@@ -571,7 +573,7 @@ class _AboutPageState extends State<AboutPage> {
                   Padding(
                     padding:
                         EdgeInsets.only(top: height / 4.00, left: width / 8.53),
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       radius: 140,
                       backgroundColor: Color(0xffF3F7FE),
                     ),
@@ -687,7 +689,7 @@ class _AboutPageState extends State<AboutPage> {
                           child: Text(
                             "Matthew Paul",
                             style: GoogleFonts.sofiaSans(
-                                color: Color(0xffFFFFFF),
+                                color: const Color(0xffFFFFFF),
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -699,7 +701,7 @@ class _AboutPageState extends State<AboutPage> {
                             height: height / 2.56,
                             child: Image.asset(
                               "assets/Vector 9.png",
-                              color: Color(0xffFFFFFF),
+                              color: const Color(0xffFFFFFF),
                             ),
                           ),
                         ),
@@ -716,7 +718,7 @@ class _AboutPageState extends State<AboutPage> {
                               "efficiently and collaboratively,"
                               " resulting in significant time and cost savings.",
                               style: GoogleFonts.sofiaSans(
-                                color: Color(0xffFFFFFF).withOpacity(.7),
+                                color: const Color(0xffFFFFFF).withOpacity(.7),
                                 fontSize: 20,
                               ),
                             ),
@@ -725,7 +727,7 @@ class _AboutPageState extends State<AboutPage> {
                         Padding(
                           padding: EdgeInsets.only(
                               left: width / 1.87, top: height / 4.13),
-                          child: CircleAvatar(
+                          child: const CircleAvatar(
                             radius: 5,
                             backgroundColor: Color(0xffFFFFFF),
                           ),
@@ -733,7 +735,7 @@ class _AboutPageState extends State<AboutPage> {
                         Padding(
                           padding: EdgeInsets.only(
                               left: width / 1.82, top: height / 4.30),
-                          child: CircleAvatar(
+                          child: const CircleAvatar(
                             radius: 3,
                             backgroundColor: Color(0xffFFFFFF),
                           ),
@@ -773,7 +775,7 @@ class _AboutPageState extends State<AboutPage> {
                                 child: Text(
                                   "Our Team",
                                   style: GoogleFonts.sofiaSans(
-                                      color: Color(0xff1666AD),
+                                      color: const Color(0xff1666AD),
                                       fontSize: 24,
                                       fontWeight: FontWeight.w800),
                                 ),
@@ -788,21 +790,21 @@ class _AboutPageState extends State<AboutPage> {
                               Text(
                                 "Our",
                                 style: GoogleFonts.sofiaSans(
-                                    color: Color(0xff151515),
+                                    color: const Color(0xff151515),
                                     fontSize: 40,
                                     fontWeight: FontWeight.w800),
                               ),
                               Text(
                                 " Team ",
                                 style: GoogleFonts.sofiaSans(
-                                    color: Color(0xff1666AD),
+                                    color: const Color(0xff1666AD),
                                     fontSize: 40,
                                     fontWeight: FontWeight.w800),
                               ),
                               Text(
                                 "Members",
                                 style: GoogleFonts.sofiaSans(
-                                    color: Color(0xff151515),
+                                    color: const Color(0xff151515),
                                     fontSize: 40,
                                     fontWeight: FontWeight.w800),
                               ),
@@ -814,7 +816,7 @@ class _AboutPageState extends State<AboutPage> {
                           child: Text(
                             "Talented team members are here",
                             style: GoogleFonts.sofiaSans(
-                                color: Color(0xff151515).withOpacity(.3),
+                                color: const Color(0xff151515).withOpacity(.3),
                                 fontSize: 20,
                                 fontWeight: FontWeight.w800),
                           ),
@@ -838,6 +840,7 @@ class _AboutPageState extends State<AboutPage> {
                                           Image.asset("assets/Ellipse 96.png"),
                                     ),
                                   ),
+
                                   Padding(
                                     padding: EdgeInsets.only(
                                         left: width / 4.71, top: height / 2.78),
@@ -865,7 +868,7 @@ class _AboutPageState extends State<AboutPage> {
                                       style: GoogleFonts.sofiaSans(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
-                                        color: Color(0xff151515),
+                                        color: const Color(0xff151515),
                                       ),
                                     ),
                                   ),
@@ -878,7 +881,7 @@ class _AboutPageState extends State<AboutPage> {
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                         color:
-                                            Color(0xff151515).withOpacity(.7),
+                                            const Color(0xff151515).withOpacity(.7),
                                       ),
                                     ),
                                   ),
@@ -924,7 +927,7 @@ class _AboutPageState extends State<AboutPage> {
                                       style: GoogleFonts.sofiaSans(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
-                                        color: Color(0xff151515),
+                                        color: const Color(0xff151515),
                                       ),
                                     ),
                                   ),
@@ -937,7 +940,7 @@ class _AboutPageState extends State<AboutPage> {
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                         color:
-                                            Color(0xff151515).withOpacity(.7),
+                                            const Color(0xff151515).withOpacity(.7),
                                       ),
                                     ),
                                   ),
@@ -982,7 +985,7 @@ class _AboutPageState extends State<AboutPage> {
                                       style: GoogleFonts.sofiaSans(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
-                                        color: Color(0xff151515),
+                                        color: const Color(0xff151515),
                                       ),
                                     ),
                                   ),
@@ -995,7 +998,7 @@ class _AboutPageState extends State<AboutPage> {
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                         color:
-                                            Color(0xff151515).withOpacity(.7),
+                                            const Color(0xff151515).withOpacity(.7),
                                       ),
                                     ),
                                   ),
@@ -1024,14 +1027,14 @@ class _AboutPageState extends State<AboutPage> {
                   Padding(
                     padding:
                         EdgeInsets.only(left: width / 1.70, top: height / 6.41),
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       radius: 10,
                       backgroundColor: Color(0xffDBECFA),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: width / 1.95, top: 150),
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       radius: 20,
                       backgroundColor: Color(0xffDBECFA),
                     ),
@@ -1053,7 +1056,7 @@ class _AboutPageState extends State<AboutPage> {
                 ],
               ),
             ),
-            FooterPage(),
+            const FooterPage(),
           ],
         ),
       ),

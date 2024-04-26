@@ -7,7 +7,6 @@ import 'package:flutter_ar_project/Views/contact_page.dart';
 import 'package:flutter_ar_project/Views/product_guide.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:neopop/widgets/buttons/neopop_button/neopop_button.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import 'package:widget_and_text_animator/widget_and_text_animator.dart';
 
