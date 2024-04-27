@@ -52,10 +52,10 @@ class _MobileHomeState extends State<MobileHome> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
-    return Scaffold(
+    return
 
       // backgroundColor: Color(0xffF3F7FE),
-    appBar: AppBar(
+  /*  appBar: AppBar(
         // extendBodyBehindAppBar: true,
       elevation: 0,
         shadowColor: Colors.white,
@@ -77,8 +77,8 @@ class _MobileHomeState extends State<MobileHome> {
       SizedBox(
           height: height/40.15,
           child: Image.asset('assets/sidebar.png')),
-    ],)),
-      body: Container(
+    ],)),*/
+      Container(
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -1198,7 +1198,7 @@ class _MobileHomeState extends State<MobileHome> {
             ],
           ),
         ),
-      ),
-    );
+      );
+
   }
 }

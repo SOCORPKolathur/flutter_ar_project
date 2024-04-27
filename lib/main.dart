@@ -11,15 +11,16 @@ import 'package:flutter_ar_project/mobile%20view/homepage.dart';
 import 'package:flutter_ar_project/mobile%20view/product_guide.dart';
 
 import 'firebase_options.dart';
+import 'mobile view/LandingPageMobile.dart';
 import 'mobile view/aboutusPage.dart';
 import 'mobile view/careerM.dart';
 import 'mobile view/contactM.dart';
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
- /* await Firebase.initializeApp(
+  await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-  );*/
+  );
   runApp(const MyApp());
 }
 
@@ -41,10 +42,10 @@ class MyApp extends StatelessWidget {
       home:width>500?
       const LandingPage() :
       // MobileHome(),
-      // const aboutusPage(),
+        LandingScreenMobile(),
       // ProductGuide()
       // ProductGuideM()
-      ContactPageM()
+     // MobileHome()
       // CareerPageM()
     );
   }

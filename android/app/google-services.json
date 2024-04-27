@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "921408464602",
+    "project_id": "ar-digital-solutions-f40bd",
+    "storage_bucket": "ar-digital-solutions-f40bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921408464602:android:f2a7164523c4f5c72167e3",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ar_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIstXaVg9ThBRGtoBj52UsGNFfcZLfPac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

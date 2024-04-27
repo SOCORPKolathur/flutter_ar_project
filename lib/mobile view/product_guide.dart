@@ -18,32 +18,7 @@ class _ProductGuideMState extends State<ProductGuideM> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        // extendBodyBehindAppBar: true,
-          elevation: 0,
-          shadowColor: Colors.white,
-          foregroundColor: Colors.white,
-          forceMaterialTransparency: true,
-          backgroundColor: Colors.white,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              InkWell(
-                onTap: (){
-                  print('Height: $height, width: $width');
-                },
-                child: SizedBox(
-                    height: height/6.69,
-                    width: width/4.35,
-                    child: Image.asset('assets/circle.png')),
-              ),
-              SizedBox(
-                  height: height/40.15,
-                  child: Image.asset('assets/sidebar.png')),
-            ],)),
-      body: Container(
+    return  Container(
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -811,7 +786,6 @@ class _ProductGuideMState extends State<ProductGuideM> {
             ],
           ),
         ),
-      ),
-    );
+      );
   }
 }

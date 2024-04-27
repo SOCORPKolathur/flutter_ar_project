@@ -37,9 +37,8 @@ class _aboutusPageState extends State<aboutusPage> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
+    return
+     /* appBar: AppBar(
         // extendBodyBehindAppBar: true,
           elevation: 0,
           shadowColor: Colors.white,
@@ -61,8 +60,8 @@ class _aboutusPageState extends State<aboutusPage> {
               SizedBox(
                   height: height/40.15,
                   child: Image.asset('assets/sidebar.png')),
-            ],)),
-      body: Container(
+            ],)),*/
+      Container(
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -1194,7 +1193,6 @@ class _aboutusPageState extends State<aboutusPage> {
             ],
           ),
         ),
-      ),
-    );
+      );
   }
 }
