@@ -40,7 +40,7 @@ class _ProductGuideMState extends State<ProductGuideM> {
                       child: ColorFiltered(
                         colorFilter: ColorFilter.mode(
                           const Color(0xffF3F7FE).withOpacity(0.2),
-                          BlendMode.lighten,
+                          BlendMode.multiply,
                         ),
                         child: Image.asset(
                           'assets/bigBox.png',
@@ -303,7 +303,7 @@ class _ProductGuideMState extends State<ProductGuideM> {
                 child: ColorFiltered(
                   colorFilter: ColorFilter.mode(
                     const Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.lighten,
+                    BlendMode.multiply,
                   ),
                   child: Stack(
                     alignment: Alignment.topCenter,
@@ -397,7 +397,7 @@ class _ProductGuideMState extends State<ProductGuideM> {
                 child: ColorFiltered(
                   colorFilter: ColorFilter.mode(
                     const Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.lighten,
+                    BlendMode.multiply,
                   ),
                   child: Stack(
                     alignment: Alignment.topCenter,
@@ -554,7 +554,7 @@ class _ProductGuideMState extends State<ProductGuideM> {
                 child: ColorFiltered(
                   colorFilter: ColorFilter.mode(
                     Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.lighten,
+                    BlendMode.multiply,
                   ),
                   child: Stack(
                     alignment: Alignment.topCenter,

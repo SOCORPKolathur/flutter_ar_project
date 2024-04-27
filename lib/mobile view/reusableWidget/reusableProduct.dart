@@ -30,7 +30,7 @@ class _ReusableProductState extends State<ReusableProduct> {
           child: ColorFiltered(
             colorFilter: ColorFilter.mode(
               Color(0xffF3F7FE).withOpacity(0.3),
-              BlendMode.lighten,
+              BlendMode.darken,
             ),
             child: Stack(
               alignment: Alignment.topCenter,
@@ -125,7 +125,7 @@ class _ReusableProductState extends State<ReusableProduct> {
           child: ColorFiltered(
             colorFilter: ColorFilter.mode(
               Color(0xffF3F7FE).withOpacity(0.3),
-              BlendMode.lighten,
+              BlendMode.darken,
             ),
             child: Stack(
               alignment: Alignment.topCenter,

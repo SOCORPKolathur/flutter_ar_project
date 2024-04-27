@@ -15,30 +15,6 @@ class _CareerPageMState extends State<CareerPageM> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return
-
-     /* appBar: AppBar(
-        // extendBodyBehindAppBar: true,
-          elevation: 0,
-          shadowColor: Colors.white,
-          foregroundColor: Colors.white,
-          forceMaterialTransparency: true,
-          backgroundColor: Colors.white,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              InkWell(
-                onTap: (){
-                  print('Height: $height, width: $width');
-                },
-                child: SizedBox(
-                    height: height/6.69,
-                    width: width/4.35,
-                    child: Image.asset('assets/circle.png')),
-              ),
-              SizedBox(
-                  height: height/40.15,
-                  child: Image.asset('assets/sidebar.png')),
-            ],)),*/
      Container(
        child: SingleChildScrollView(
           child: Column(
@@ -60,7 +36,7 @@ class _CareerPageMState extends State<CareerPageM> {
                       child: ColorFiltered(
                         colorFilter: ColorFilter.mode(
                           Color(0xffF3F7FE).withOpacity(0.2),
-                          BlendMode.lighten,
+                          BlendMode.multiply,
                         ),
                         child: Image.asset(
                           'assets/bigBox.png',
@@ -103,7 +79,6 @@ class _CareerPageMState extends State<CareerPageM> {
                                   fontWeight: FontWeight.w800,
                                 ),
                               ),
-
                             ],
                           ),
                         ),
@@ -121,7 +96,6 @@ class _CareerPageMState extends State<CareerPageM> {
                         ],
                       ),
                     ),
-
                     Positioned(
                       right: width/6.53,
                       top: height/16.060,
@@ -134,16 +108,8 @@ class _CareerPageMState extends State<CareerPageM> {
                         ],
                       ),
                     ),
-
-
-
-
-
-
                     Stack(
                       children: [
-
-
                         Positioned(
                           top: height/7.3,
                           right: 0,
@@ -154,9 +120,6 @@ class _CareerPageMState extends State<CareerPageM> {
                             color: Color(0xffFFD670),
                           ),
                         ),
-
-
-
                         /// rose
                         Positioned(
                           bottom: height/26.76,
@@ -170,7 +133,6 @@ class _CareerPageMState extends State<CareerPageM> {
                             height: height/26.7,
                           ),
                         ),
-
                         Positioned(
                           bottom: height/26.76,
                           right: 0,
@@ -183,9 +145,6 @@ class _CareerPageMState extends State<CareerPageM> {
                             height: height/26.7,
                           ),
                         ),
-
-
-
                         Positioned(
                           bottom: height/4.72,
                           left: width/6.53,
@@ -195,12 +154,8 @@ class _CareerPageMState extends State<CareerPageM> {
                             child: Image.asset('assets/Ellipse 85.png'),
                           ),
                         ),
-
-
-
                         Stack(
                           children: [
-
                             Positioned(
                               top: height/7.64,
                               left: width/39.20,
@@ -210,7 +165,6 @@ class _CareerPageMState extends State<CareerPageM> {
                                 child: Image.asset('assets/Dot Ornament.png'),
                               ),
                             ),
-
                             Positioned(
                               top: height/6.42,
                               right: 0,
@@ -220,17 +174,8 @@ class _CareerPageMState extends State<CareerPageM> {
                                 child: Image.asset('assets/successman.png'),
                               ),
                             ),
-
-
-
                           ],
                         ),
-
-
-
-
-
-
                       ],
                     ),
                   ],
@@ -244,7 +189,6 @@ class _CareerPageMState extends State<CareerPageM> {
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: [
-
                     Positioned(
                       top: 0,
                       right: width/5.6,
@@ -254,7 +198,6 @@ class _CareerPageMState extends State<CareerPageM> {
                         child: Image.asset('assets/Group 10 (3).png'),
                       ),
                     ),
-
                     Positioned(
                         top: height/20.07,
                         left: width/2.8,
@@ -262,91 +205,82 @@ class _CareerPageMState extends State<CareerPageM> {
                     Positioned(
                         top: height/8.03,
                         left: width/7.84,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          // crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: width/1.30,
-                              child: RichText(
-                                text: TextSpan(
-                                  style: GoogleFonts.sofiaSans(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                  ),
-                                  children: <TextSpan>[
-                                    TextSpan(text: 'Join ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 25)),
-                                    TextSpan(
-                                      text: 'Our Team ',
-                                      style: GoogleFonts.sofiaSans(
-                                        color: Color(0xff1666AD),
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w800,
-                                      ),
-                                    ),
-                                    TextSpan(text: ' And Shape ',
-                                        style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 25)),
-
-                                    TextSpan(
-                                      text: 'The Future ',
-                                      style: GoogleFonts.sofiaSans(
-                                        color: Color(0xff1666AD),
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w800,
-                                      ),
-                                    ),
-
-                                  ],
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: height/80.3,),
-                            Container(
+                        child: Container(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            // crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
                                 width: width/1.30,
-                                child: Text('We aim to travel with our customers throughout their journey, helping them to evolve their businesses and inspiring them to redefine their current business models.',
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.sofiaSans(color: Color(0xff151515).withOpacity(0.7), fontSize: 17),
-
-                                )),
-                            SizedBox(height: height/40.15,),
-
-                            Padding(
-                              padding: const EdgeInsets.only(),
-                              child: NeoPopButton(
-                                color: const Color(0xff1666AD),
-                                onTapDown: () {
-                                },
-                                onTapUp: () {},
-                                child: SizedBox(
-                                  height: height/20.07,
-                                  width: width/2.8,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                    MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        "Apply Here ...",
+                                child: RichText(
+                                  text: TextSpan(
+                                    style: GoogleFonts.sofiaSans(
+                                      color: Colors.black,
+                                      fontSize: 25,
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(text: 'Join ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 25)),
+                                      TextSpan(
+                                        text: 'Our Team ',
                                         style: GoogleFonts.sofiaSans(
-                                            color: const Color(0xffFFFFFF),
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500),
+                                          color: Color(0xff1666AD),
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w800,
+                                        ),
                                       ),
-
+                                      TextSpan(text: ' And Shape ',
+                                          style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 25)),
+                                      TextSpan(
+                                        text: 'The Future ',
+                                        style: GoogleFonts.sofiaSans(
+                                          color: Color(0xff1666AD),
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w800,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
                               ),
-                            ),
+                              SizedBox(height: height/80.3,),
+                              Container(
+                                  width: width/1.30,
+                                  child: Text('We aim to travel with our customers throughout their journey, helping them to evolve their businesses and inspiring them to redefine their current business models.',
+                                    textAlign: TextAlign.center,
+                                    style: GoogleFonts.sofiaSans(color: Color(0xff151515).withOpacity(0.7), fontSize: 17),
 
-
-
-
-
-
-                          ],
+                                  )),
+                              SizedBox(height: height/40.15,),
+                              Padding(
+                                padding: const EdgeInsets.only(),
+                                child: NeoPopButton(
+                                  color: const Color(0xff1666AD),
+                                  onTapDown: () {
+                                  },
+                                  onTapUp: () {},
+                                  child: SizedBox(
+                                    height: height/20.07,
+                                    width: width/2.8,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "Apply Here ...",
+                                          style: GoogleFonts.sofiaSans(
+                                              color: const Color(0xffFFFFFF),
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         )),
-
                   ],
                 ),
               ),
@@ -356,7 +290,7 @@ class _CareerPageMState extends State<CareerPageM> {
                 child: ColorFiltered(
                   colorFilter: ColorFilter.mode(
                     Color(0xffF3F7FE).withOpacity(0.2),
-                    BlendMode.lighten,
+                    BlendMode.multiply,
                   ),
                   child: Stack(
                     alignment: Alignment.topCenter,
@@ -391,7 +325,6 @@ class _CareerPageMState extends State<CareerPageM> {
                           ],
                         ),
                       ),
-
                       Positioned(
                         right: width/19.6,
                         top: height/32.12,
@@ -404,10 +337,7 @@ class _CareerPageMState extends State<CareerPageM> {
                           ],
                         ),
                       ),
-
-
                       /// Down hands man...
-
                       Positioned(
                         left: width/7.84,
                         top: height/20.07,
@@ -421,24 +351,17 @@ class _CareerPageMState extends State<CareerPageM> {
                           ],
                         ),
                       ),
-
-
-
-
-
-
                     ],
                   ),
                 ),
               ),
               /// last...
-
               Container(
                 height: height/3.08,
                 child: ColorFiltered(
                   colorFilter: ColorFilter.mode(
                     Color(0xffF3F7FE).withOpacity(0.2),
-                    BlendMode.lighten,
+                    BlendMode.multiply,
                   ),
                   child: Stack(
                     alignment: Alignment.topCenter,
@@ -461,11 +384,6 @@ class _CareerPageMState extends State<CareerPageM> {
                           ],
                         ),
                       ),
-
-
-
-
-
                       Positioned(
                         right: width/19.6,
                         top: height/11.470,
@@ -478,7 +396,6 @@ class _CareerPageMState extends State<CareerPageM> {
                           ],
                         ),
                       ),
-
                       Positioned(
                         top: 0,
                         right: width/5.6,
@@ -488,7 +405,6 @@ class _CareerPageMState extends State<CareerPageM> {
                           child: Image.asset('assets/Group 10 (3).png'),
                         ),
                       ),
-
                       Positioned(
                           top: height/20.07,
                           left: width/2.17,
@@ -519,135 +435,99 @@ class _CareerPageMState extends State<CareerPageM> {
                                           fontWeight: FontWeight.w800,
                                         ),
                                       ),
-
-
                                     ],
                                   ),
                                 ),
                               ),
                               SizedBox(height: height/80.3,),
                               Container(
-
                                   width: width/1.30,
                                   child: Text('If you know our current job roles and responsibilities, Follow Us ',
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.sofiaSans(color: Color(0xff151515).withOpacity(0.7), fontSize: 17),
-
                                   )),
                               SizedBox(height: height/40.15,),
-
-
-
-
-
-
-
-
                             ],
                           )),
-
                       Positioned(
                           top: height/8.03,
                           left: width/7.84,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            // crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: width/1.30,
-                                child: RichText(
-                                  text: TextSpan(
-                                    style: GoogleFonts.sofiaSans(
-                                      color: Colors.black,
-                                      fontSize: 25,
-                                    ),
-                                    children: <TextSpan>[
-                                      TextSpan(text: '    For Present ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 25)),
-                                      TextSpan(
-                                        text: 'Job Opening ',
-                                        style: GoogleFonts.sofiaSans(
-                                          color: Color(0xff1666AD),
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.w800,
-                                        ),
+                          child: Container(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              // crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: width/1.30,
+                                  child: RichText(
+                                    text: TextSpan(
+                                      style: GoogleFonts.sofiaSans(
+                                        color: Colors.black,
+                                        fontSize: 25,
                                       ),
-
-
-                                    ],
+                                      children: <TextSpan>[
+                                        TextSpan(text: '    For Present ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 25)),
+                                        TextSpan(
+                                          text: 'Job Opening ',
+                                          style: GoogleFonts.sofiaSans(
+                                            color: Color(0xff1666AD),
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.w800,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(height: height/80.3,),
-                              Container(
-
-                                  width: width/1.30,
-                                  child: Text('If you know our current job roles and responsibilities, Follow Us ',
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.sofiaSans(color: Color(0xff151515).withOpacity(0.7), fontSize: 17),
-
-                                  )),
-                              SizedBox(height: height/40.15,),
-
-                              Positioned(
-                                top: 0,
-                                // right: width/5.6,
-                                child:
+                                SizedBox(height: height/80.3,),
                                 Container(
-                                  width: width/1.56,
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Container(
-                                          width: width/7.84,
-                                          child: Image.asset('assets/gmail.png')),
-                                      Container(
-                                          width: width/7.84,
-                                          child: Image.asset('assets/linkedin.png')),
-                                      Container(
-                                          width: width/7.84,
-                                          child: Image.asset('assets/facebook.png')),
-                                      Container(
-                                          width: width/7.84,
-                                          child: Image.asset('assets/gmail.png')),
+                                    width: width/1.30,
+                                    child: Text('If you know our current job roles and responsibilities, Follow Us ',
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.sofiaSans(color: Color(0xff151515).withOpacity(0.7), fontSize: 17),
 
-
-
-                                    ],
-                                  )
+                                    )),
+                                SizedBox(height: height/40.15,),
+                                Positioned(
+                                  top: 0,
+                                  // right: width/5.6,
+                                  child:
+                                  Container(
+                                    width: width/1.56,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Container(
+                                            width: width/7.84,
+                                            child: Image.asset('assets/gmail.png')),
+                                        Container(
+                                            width: width/7.84,
+                                            child: Image.asset('assets/linkedin.png')),
+                                        Container(
+                                            width: width/7.84,
+                                            child: Image.asset('assets/facebook.png')),
+                                        Container(
+                                            width: width/7.84,
+                                            child: Image.asset('assets/gmail.png')),
+                                      ],
+                                    )
+                                  ),
                                 ),
-                              ),
-
-
-
-
-
-
-
-
-
-                            ],
+                              ],
+                            ),
                           )),
-
-
-
-
-
-
-
-
                     ],
                   ),
                 ),
               ),
-
               /// iLLUSTRATION ONLY
               Container(
                 height: height/5.01,
                 child: ColorFiltered(
                   colorFilter: ColorFilter.mode(
                     Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.lighten,
+                    BlendMode.multiply,
                   ),
                   child: Stack(
                     alignment: Alignment.topCenter,
@@ -658,8 +538,6 @@ class _CareerPageMState extends State<CareerPageM> {
                           fit: BoxFit.cover,
                         ),
                       ),
-
-
                       /// left ...
                       Positioned(
                         left: width/15.68,
@@ -673,7 +551,6 @@ class _CareerPageMState extends State<CareerPageM> {
                           ],
                         ),
                       ),
-
                       Positioned(
                         right: width/5.225,
                         top: height/26.76,
@@ -686,7 +563,6 @@ class _CareerPageMState extends State<CareerPageM> {
                           ],
                         ),
                       ),
-
                       Positioned(
                         left: 0,
                         bottom: 0,
@@ -699,13 +575,6 @@ class _CareerPageMState extends State<CareerPageM> {
                           ],
                         ),
                       ),
-
-
-
-
-
-
-
                     ],
                   ),
                 ),
@@ -721,7 +590,6 @@ class _CareerPageMState extends State<CareerPageM> {
                     Image.asset('assets/AR Logo.png', scale: 6,),
                     SizedBox(height: height/40.15,),
                     Text('Explore Our Products', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 18,)),
-
                     SizedBox(height: height/26.7,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -733,10 +601,8 @@ class _CareerPageMState extends State<CareerPageM> {
                       ],
                     ),
                     SizedBox(height: height/40.15,),
-
                     Padding(
                       padding: EdgeInsets.only(left: width/11.2, right: 0, top: height/200.75, bottom: height/200.75),
-
                       child: Row(
                         // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -756,7 +622,6 @@ class _CareerPageMState extends State<CareerPageM> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: width/11.2, right: 0, top: height/200.75, bottom: height/200.75),
-
                       child: Row(
                         // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -796,7 +661,6 @@ class _CareerPageMState extends State<CareerPageM> {
                     ),
                     Padding(
                       padding:  EdgeInsets.only(left: width/11.2, right: 0, top: height/200.75, bottom: height/200.75),
-
                       child: Row(
                         // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -843,30 +707,17 @@ class _CareerPageMState extends State<CareerPageM> {
                       children: [
                         Text('© 2024 Ed-Circle. All rights reserved.', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3)),),
                         SizedBox(width: width/13.06,),
-
                         Image.asset('assets/Social icon.png', scale: 1.5,),
                         SizedBox(width: width/39.2,),
                         Image.asset('assets/Group (13).png', scale: 1.5,),
                         SizedBox(width: width/39.2,),
-
                         Image.asset('assets/Social icon (1).png', scale: 1.5,),
                         SizedBox(width: width/39.2,),
-
-
-
                       ],
                     )
                   ],
                 ),
-
               )
-
-
-
-
-
-
-
             ],
           ),
         ),

@@ -41,6 +41,7 @@ class _LandingScreenMobileState extends State<LandingScreenMobile> with SingleTi
     double width = MediaQuery.of(context).size.width;
     return Material(
       child: FancyDrawerWrapper(
+
         backgroundColor: Colors.white,
         controller: _controller,
         drawerItems: <Widget>[
@@ -135,6 +136,8 @@ class _LandingScreenMobileState extends State<LandingScreenMobile> with SingleTi
                   InkWell(
                     onTap: (){
                       print('Height: $height, width: $width');
+                      print('Checking...');
+                      print(height/9.81);
                     },
                     child: SizedBox(
                         height: height/6.69,
