@@ -21,10 +21,7 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for ios - '
@@ -53,12 +50,21 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAdIzTLULzLU5WlgcCTJKDn2SHHRKC1uOM',
-    appId: '1:219073460741:web:13ea547f3a438773c53a6c',
-    messagingSenderId: '219073460741',
-    projectId: 'arwebsite-fb62d',
-    authDomain: 'arwebsite-fb62d.firebaseapp.com',
-    storageBucket: 'arwebsite-fb62d.appspot.com',
-    measurementId: 'G-510FEN8G3Q',
+    apiKey: 'AIzaSyAPms_XDQ-vY8BevAeON6cVSarjXqwSwdE',
+    appId: '1:921408464602:web:e7e33b1cd6bec0a72167e3',
+    messagingSenderId: '921408464602',
+    projectId: 'ar-digital-solutions-f40bd',
+    authDomain: 'ar-digital-solutions-f40bd.firebaseapp.com',
+    storageBucket: 'ar-digital-solutions-f40bd.appspot.com',
+    measurementId: 'G-731ZB9XX6F',
   );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyCIstXaVg9ThBRGtoBj52UsGNFfcZLfPac',
+    appId: '1:921408464602:android:f2a7164523c4f5c72167e3',
+    messagingSenderId: '921408464602',
+    projectId: 'ar-digital-solutions-f40bd',
+    storageBucket: 'ar-digital-solutions-f40bd.appspot.com',
+  );
+
 }
