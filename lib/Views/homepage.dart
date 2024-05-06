@@ -30,7 +30,6 @@ class _HomePageState extends State<HomePage> {
   bool isVisible9 = false;
   bool isVisible10 = false;
 
-
   bool text = false;
   bool text1 = false;
   bool text2 = false;
@@ -41,27 +40,22 @@ class _HomePageState extends State<HomePage> {
     // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(milliseconds: 1400), () {
-
-    setState(() {
-      isVisible8 = true;
-    });
-
+      setState(() {
+        isVisible8 = true;
+      });
     });
     Future.delayed(const Duration(milliseconds: 2800), () {
-
       setState(() {
         isVisible9 = true;
       });
-
     });
     Future.delayed(const Duration(milliseconds: 4200), () {
-
       setState(() {
         isVisible10 = true;
       });
-
     });
   }
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -154,8 +148,7 @@ class _HomePageState extends State<HomePage> {
                                         AnimatedTextKit(
                                           animatedTexts: [
                                             TyperAnimatedText(
-                                              speed:
-                                                  Duration(milliseconds: 60),
+                                              speed: Duration(milliseconds: 60),
                                               "Solutions",
                                               textStyle: GoogleFonts.sofiaSans(
                                                   color: Color(0xff151515),
@@ -209,8 +202,7 @@ class _HomePageState extends State<HomePage> {
                                         AnimatedTextKit(
                                           animatedTexts: [
                                             TyperAnimatedText(
-                                              speed:
-                                                  Duration(milliseconds: 60),
+                                              speed: Duration(milliseconds: 60),
                                               " your",
                                               textStyle: GoogleFonts.sofiaSans(
                                                   color: Color(0xff151515),
@@ -276,7 +268,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               SizedBox(
-                                height: height/21.36,
+                                height: height / 21.36,
                               ),
                               Padding(
                                 padding: EdgeInsets.only(right: width / 1.35),
@@ -374,20 +366,20 @@ class _HomePageState extends State<HomePage> {
                               width: width / 2.732,
                               child: Image.asset("assets/Rectangle 50.png")),
                         ),
-
                         Padding(
                           padding: EdgeInsets.only(
                               top: height / 5.57, left: width / 1.19),
-                          child: isVisible8?ZoomIn(
-                         duration: Duration(milliseconds: 1400),
-                            child: Container(
-                                height: height / 2.91,
-                                width: width / 6.20,
-                                child: Image.asset("assets/Group 84 (1).png")),
-                          ):SizedBox(),
+                          child: isVisible8
+                              ? ZoomIn(
+                                  duration: Duration(milliseconds: 1400),
+                                  child: Container(
+                                      height: height / 2.91,
+                                      width: width / 6.20,
+                                      child: Image.asset(
+                                          "assets/Group 84 (1).png")),
+                                )
+                              : SizedBox(),
                         ),
-
-
                         Padding(
                           padding: EdgeInsets.only(
                               top: height / 1.50, left: width / 1.58),
@@ -799,13 +791,12 @@ class _HomePageState extends State<HomePage> {
                           child: Stack(
                             children: [
                               Padding(
-                                padding: EdgeInsets.only(
-                                    left: width / 68.3, top: height / 7.12),
+                                padding: EdgeInsets.only(top: height / 7.12),
                                 child: Column(
                                   children: [
                                     Padding(
                                       padding: EdgeInsets.only(
-                                        right: width / 3.06,
+                                        right: width / 3.27,
                                       ),
                                       child: Stack(
                                         children: [
@@ -832,33 +823,39 @@ class _HomePageState extends State<HomePage> {
                                     Padding(
                                       padding: EdgeInsets.only(
                                           top: height / 32.05,
-                                          left: width / 68.3),
+                                          left: width / 24),
                                       child: Container(
                                         width: width / 2.03,
-                                        child: isVisible3?TextAnimator(
-
-                                          "We have multiple products, each with a unique solution to a Challenge",
-                                          atRestEffect: WidgetRestingEffects.pulse(effectStrength: 0.1),
-
-                                          incomingEffect: WidgetTransitionEffects.incomingSlideInFromTop(
-                                              blur: const Offset(0, 20), scale: 2),
-                                          style: GoogleFonts.sofiaSans(
-                                              color: Color(0xff151515),
-                                              fontSize: 40,
-                                              fontWeight: FontWeight.w800),
-                                        ):SizedBox(),
+                                        child: isVisible3
+                                            ? TextAnimator(
+                                                "We have multiple products, each with a unique solution to a Challenge",
+                                                atRestEffect:
+                                                    WidgetRestingEffects.pulse(
+                                                        effectStrength: 0.1),
+                                                incomingEffect:
+                                                    WidgetTransitionEffects
+                                                        .incomingSlideInFromTop(
+                                                            blur: const Offset(
+                                                                0, 20),
+                                                            scale: 2),
+                                                style: GoogleFonts.sofiaSans(
+                                                    color: Color(0xff151515),
+                                                    fontSize: 40,
+                                                    fontWeight:
+                                                        FontWeight.w800),
+                                              )
+                                            : SizedBox(),
                                       ),
                                     ),
-
                                     Padding(
                                       padding: EdgeInsets.only(
-                                          left: width / 39.02,
+                                          left: width / 18,
                                           top: height / 32.05),
                                       child: Container(
                                         width: width / 2.00,
                                         child: Text(
                                           "We aim to travel with our customers throughout their journey helping them to"
-                                              " evolve their business and inspiring them to redefine their current business model.",
+                                          " evolve their business and inspiring them to redefine their current business model.",
                                           style: GoogleFonts.sofiaSans(
                                               color: Color(0xff151515)
                                                   .withOpacity(.5),
@@ -867,48 +864,53 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                       ),
                                     ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    top: height / 1.33, left: width / 19.51),
-                                child: NeoPopButton(
-                                  color: Color(0xff1666AD),
-                                  onTapDown: () {
-                                    Navigator.of(context).push(MaterialPageRoute(
-                                        builder: (context) => ProductGuide()));
-                                  },
-                                  onTapUp: () {},
-                                  child: SizedBox(
-                                    height: height / 12.82,
-                                    width: width / 6.83,
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          "Read More",
-                                          style: GoogleFonts.sofiaSans(
-                                              color: Color(0xffFFFFFF),
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w500),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          top: height / 37.7,
+                                          right: width / 3.42),
+                                      child: NeoPopButton(
+                                        color: Color(0xff1666AD),
+                                        onTapDown: () {
+                                          Navigator.of(context).push(
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      ProductGuide()));
+                                        },
+                                        onTapUp: () {},
+                                        child: SizedBox(
+                                          height: height / 12.82,
+                                          width: width / 6.83,
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                "Read More",
+                                                style: GoogleFonts.sofiaSans(
+                                                    color: Color(0xffFFFFFF),
+                                                    fontSize: 16,
+                                                    fontWeight:
+                                                        FontWeight.w500),
+                                              ),
+                                              IconButton(
+                                                  onPressed: () {},
+                                                  icon: Icon(
+                                                    Icons.more_horiz,
+                                                    color: Color(0xffFFFFFF),
+                                                  ))
+                                            ],
+                                          ),
                                         ),
-                                        IconButton(
-                                            onPressed: () {},
-                                            icon: Icon(
-                                              Icons.more_horiz,
-                                              color: Color(0xffFFFFFF),
-                                            ))
-                                      ],
+                                      ),
                                     ),
-                                  ),
+                                  ],
                                 ),
                               ),
                               FadeInRight(
                                 animate: isVisible3,
                                 child: Padding(
-                                  padding:
-                                  EdgeInsets.only(top: 0, left: width / 2.00),
+                                  padding: EdgeInsets.only(
+                                      top: 0, left: width / 2.00),
                                   child: Stack(
                                     children: [
                                       Padding(
@@ -946,10 +948,12 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                       Padding(
                                         padding: EdgeInsets.only(
-                                            top: height / 1.16, left: width / 2.78),
+                                            top: height / 1.16,
+                                            left: width / 2.78),
                                         child: Container(
                                           width: width / 13.66,
-                                          child: Image.asset("assets/Bad Idea.png"),
+                                          child: Image.asset(
+                                              "assets/Bad Idea.png"),
                                         ),
                                       ),
                                       Padding(
@@ -967,7 +971,8 @@ class _HomePageState extends State<HomePage> {
                                         child: Container(
                                           height: height / 16.02,
                                           width: width / 5.46,
-                                          child: Image.asset("assets/Spiral 5.png"),
+                                          child: Image.asset(
+                                              "assets/Spiral 5.png"),
                                         ),
                                       ),
                                     ],
@@ -989,7 +994,8 @@ class _HomePageState extends State<HomePage> {
                                 child: Container(
                                   height: height / 3.20,
                                   width: width / 6.20,
-                                  child: Image.asset("assets/Polygon 3 (1).png"),
+                                  child:
+                                      Image.asset("assets/Polygon 3 (1).png"),
                                 ),
                               ),
                               Padding(
@@ -1019,14 +1025,15 @@ class _HomePageState extends State<HomePage> {
                                         border: Border.all(
                                             color: Color(0xff151515)
                                                 .withOpacity(.3)),
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     child: Row(
                                       children: [
                                         Container(
                                           height: height / 8.01,
                                           width: width / 17.07,
                                           child:
-                                          Image.asset("assets/image 5.png"),
+                                              Image.asset("assets/image 5.png"),
                                         ),
                                         Text(
                                           "Constituency Management System",
@@ -1048,14 +1055,15 @@ class _HomePageState extends State<HomePage> {
                                         border: Border.all(
                                             color: Color(0xff151515)
                                                 .withOpacity(.3)),
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     child: Row(
                                       children: [
                                         Container(
                                           height: height / 8.01,
                                           width: width / 17.07,
                                           child:
-                                          Image.asset("assets/image 6.png"),
+                                              Image.asset("assets/image 6.png"),
                                         ),
                                         Text(
                                           "Online Attendance Management System",
@@ -1084,14 +1092,15 @@ class _HomePageState extends State<HomePage> {
                                         border: Border.all(
                                             color: Color(0xff151515)
                                                 .withOpacity(.3)),
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     child: Row(
                                       children: [
                                         Container(
                                           height: height / 8.01,
                                           width: width / 17.07,
                                           child:
-                                          Image.asset("assets/image 7.png"),
+                                              Image.asset("assets/image 7.png"),
                                         ),
                                         Text(
                                           "Church Management System",
@@ -1113,7 +1122,8 @@ class _HomePageState extends State<HomePage> {
                                         border: Border.all(
                                             color: Color(0xff151515)
                                                 .withOpacity(.3)),
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     child: Row(
                                       children: [
                                         Container(
@@ -1149,14 +1159,15 @@ class _HomePageState extends State<HomePage> {
                                         border: Border.all(
                                             color: Color(0xff151515)
                                                 .withOpacity(.3)),
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     child: Row(
                                       children: [
                                         Container(
                                           height: height / 8.01,
                                           width: width / 17.07,
                                           child:
-                                          Image.asset("assets/image 4.png"),
+                                              Image.asset("assets/image 4.png"),
                                         ),
                                         Text(
                                           "Asset Management System",
@@ -1178,7 +1189,8 @@ class _HomePageState extends State<HomePage> {
                                         border: Border.all(
                                             color: Color(0xff151515)
                                                 .withOpacity(.3)),
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     child: Row(
                                       children: [
                                         Container(
@@ -1214,7 +1226,8 @@ class _HomePageState extends State<HomePage> {
                                         border: Border.all(
                                             color: Color(0xff151515)
                                                 .withOpacity(.3)),
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     child: Row(
                                       children: [
                                         Container(
@@ -1243,7 +1256,8 @@ class _HomePageState extends State<HomePage> {
                                         border: Border.all(
                                             color: Color(0xff151515)
                                                 .withOpacity(.3)),
-                                        borderRadius: BorderRadius.circular(10)),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     child: Row(
                                       children: [
                                         Container(
@@ -1272,7 +1286,8 @@ class _HomePageState extends State<HomePage> {
                                 width: width / 2.48,
                                 decoration: BoxDecoration(
                                     border: Border.all(
-                                        color: Color(0xff151515).withOpacity(.3)),
+                                        color:
+                                            Color(0xff151515).withOpacity(.3)),
                                     borderRadius: BorderRadius.circular(10)),
                                 child: Row(
                                   children: [
@@ -1359,7 +1374,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: height / 10.68, left: width / 2.39),
+                              left: width / 2.4, top: height / 9.42),
                           child: Stack(
                             children: [
                               Container(
@@ -1383,31 +1398,43 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: height / 3.77, left: width / 2.25),
+                              top: height / 4.18, left: width / 2.25),
                           child: Column(
                             children: [
+                              SizedBox(
+                                height: height / 37.7,
+                              ),
                               Container(
                                 width: width / 1.95,
-                                child: isVisible7?TextAnimator(
-                                  "Discover a World of Possibilities with Our Comprehensive Product Catalog",
-                                  atRestEffect: WidgetRestingEffects.pulse(effectStrength: 0.6),
-                                  incomingEffect: WidgetTransitionEffects.incomingSlideInFromBottom(
-                                      blur: const Offset(0, 20), scale: 2),
-                                  style: GoogleFonts.sofiaSans(
-                                      color: Color(0xff151515),
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.w800),
-                                ):SizedBox(),
+                                child: isVisible7
+                                    ? TextAnimator(
+                                        "Discover a World of Possibilities with Our Comprehensive Product Catalog",
+                                        atRestEffect:
+                                            WidgetRestingEffects.pulse(
+                                                effectStrength: 0.6),
+                                        incomingEffect: WidgetTransitionEffects
+                                            .incomingSlideInFromBottom(
+                                                blur: const Offset(0, 20),
+                                                scale: 2),
+                                        style: GoogleFonts.sofiaSans(
+                                            color: Color(0xff151515),
+                                            fontSize: 40,
+                                            fontWeight: FontWeight.w800),
+                                      )
+                                    : SizedBox(),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(top: 32.05),
+                                padding: EdgeInsets.only(
+                                  top: 20,
+                                ),
                                 child: Container(
                                   width: width / 1.97,
                                   child: Text(
                                     "We aim to travel with our customers throughout their journey helping them to evolve their"
                                     " business and inspiring them to redefine their current business model.",
                                     style: GoogleFonts.sofiaSans(
-                                        color: Color(0xff151515).withOpacity(.5),
+                                        color:
+                                            Color(0xff151515).withOpacity(.5),
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold),
                                   ),
@@ -1416,41 +1443,44 @@ class _HomePageState extends State<HomePage> {
                               SizedBox(
                                 height: height / 21.36,
                               ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(
-                              left: width / 2.23, top: height / 1.49),
-                          child: NeoPopButton(
-                            color: Color(0xff1666AD),
-                            onTapDown: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => ProductGuide()));
-                            },
-                            onTapUp: () {},
-                            child: SizedBox(
-                              height: height / 12.82,
-                              width: width / 6.83,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "Read More",
-                                    style: GoogleFonts.sofiaSans(
-                                        color: Color(0xffFFFFFF),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500),
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    right: width / 2.76, top: height / 75.4),
+                                child: NeoPopButton(
+                                  color: Color(0xff1666AD),
+                                  onTapDown: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                ProductGuide()));
+                                  },
+                                  onTapUp: () {},
+                                  child: SizedBox(
+                                    height: height / 12.82,
+                                    width: width / 6.83,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "Read More",
+                                          style: GoogleFonts.sofiaSans(
+                                              color: Color(0xffFFFFFF),
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                        IconButton(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.more_horiz,
+                                              color: Color(0xffFFFFFF),
+                                            ))
+                                      ],
+                                    ),
                                   ),
-                                  IconButton(
-                                      onPressed: () {},
-                                      icon: Icon(
-                                        Icons.more_horiz,
-                                        color: Color(0xffFFFFFF),
-                                      ))
-                                ],
+                                ),
                               ),
-                            ),
+                            ],
                           ),
                         ),
                       ],

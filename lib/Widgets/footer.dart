@@ -163,7 +163,7 @@ class _FooterPageState extends State<FooterPage> {
                             Navigator.of(context).push(
                                 MaterialPageRoute(builder: (context)=>ContactUs()));
                           },
-                          child: Text("Contacts",
+                          child: Text("Contact Us",
                             style: GoogleFonts.sofiaSans(
                               color: Color(0xffFFFFFF),
                               fontSize: 20,

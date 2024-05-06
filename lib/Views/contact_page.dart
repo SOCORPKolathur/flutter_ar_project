@@ -428,7 +428,7 @@ class _ContactUsState extends State<ContactUs> {
                     ),
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(left:width/1.64,top:740),
+                    padding:  EdgeInsets.only(left:width/1.64,top:height/0.86),
                     child: Column(
                       children: [
                         Row(
