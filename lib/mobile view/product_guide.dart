@@ -299,6 +299,7 @@ class _ProductGuideMState extends State<ProductGuideM> {
                               MaterialPageRoute(
                                   builder: (context) => const ContactPageM()));
                         },
+
                         onTapUp: () {},
                         child: SizedBox(
                           height: height/20.07,
