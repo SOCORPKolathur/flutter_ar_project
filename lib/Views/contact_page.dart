@@ -641,6 +641,8 @@ class _ContactUsState extends State<ContactUs> {
                       child: Image.asset("assets/Vector 3 (1).png"),
                     ),
                   ),
+
+
                   Container(
                     height: height / 0.89,
                     width: double.infinity,
@@ -693,7 +695,8 @@ class _ContactUsState extends State<ContactUs> {
                                   ],
                                 ),
                                 con1 == true
-                                    ? Padding(
+                                    ?
+                                Padding(
                                         padding: EdgeInsets.only(
                                             left: width / 39.02),
                                         child: GestureDetector(
@@ -702,7 +705,8 @@ class _ContactUsState extends State<ContactUs> {
                                               con1 = !con1;
                                             });
                                           },
-                                          child: CircleAvatar(
+                                          child:
+                                          CircleAvatar(
                                             radius: 30,
                                             backgroundColor: const Color(0xffFFFFFF),
                                             child: Image.asset(
@@ -1001,7 +1005,6 @@ class _ContactUsState extends State<ContactUs> {
                       child: Image.asset("assets/Group 10 (4).png"),
                     ),
                   ),
-
                 ],
               ),
               const FooterPage(),

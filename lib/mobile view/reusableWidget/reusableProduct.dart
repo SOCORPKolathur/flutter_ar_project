@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ar_project/mobile%20view/contactM.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:neopop/widgets/buttons/neopop_button/neopop_button.dart';
 
@@ -22,196 +23,110 @@ class ReusableProduct extends StatefulWidget {
 class _ReusableProductState extends State<ReusableProduct> {
   @override
   Widget build(BuildContext context) {
+    
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    
+    
     return Column(
       children: [
-        /// Second Box
         Container(
-          height: 360,
-          child: ColorFiltered(
-            colorFilter: ColorFilter.mode(
-              Color(0xffF3F7FE).withOpacity(0.3),
-              BlendMode.darken,
-            ),
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                Positioned.fill(
-                  child: Image.asset(
-                    'assets/bigBox.png',
-                    fit: BoxFit.cover,
-                  ),
+          height: height/2.055,
+          child: Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              Positioned.fill(
+                child: Image.asset(
+                  'assets/bigBox.png',
+                  fit: BoxFit.cover,
                 ),
-                // Positioned(
-                //   left: 100,
-                //   top: 25,
-                //   child: Stack(
-                //     children: [
-                //       SizedBox(
-                //         width: 175,
-                //         child: Image.asset('assets/lengthLogo.png', fit: BoxFit.contain),
-                //       ),
-                //     ],
-                //   ),
-                // ),
-                // Positioned(
-                //   right: 0,
-                //   top: 0,
-                //   child: Stack(
-                //     children: [
-                //       SizedBox(
-                //         width: 90,
-                //         child: Image.asset('assets/Dot Ornament.png', fit: BoxFit.contain),
-                //       ),
-                //     ],
-                //   ),
-                // ),
-                /// left ...
-                Positioned(
-                  left: 70,
-                  top: 50,
-                  child: Stack(
-                    children: [
-                      SizedBox(
-                        width: 15,
-                        child: Image.asset(widget.leftImg, fit: BoxFit.contain),
-                      ),
-                    ],
-                  ),
+              ),
+
+              /// left ...
+              Positioned(
+                left: width/5.1470,
+                top: height/14.8,
+                child: Stack(
+                  children: [
+                    SizedBox(
+                      width: width/24,
+                      child: Image.asset(widget.leftImg, fit: BoxFit.contain),
+                    ),
+                  ],
                 ),
+              ),
 
-                Positioned(
-                  right:
-                  70,
-                  top: 20,
-                  child: Stack(
-                    children: [
-                      SizedBox(
-                        width: 10,
-                        child: Image.asset(widget.rightImg, fit: BoxFit.contain),
-                      ),
-                    ],
-                  ),
+              Positioned(
+                right: width/5.14,
+                top: height/37,
+                child: Stack(
+                  children: [
+                    SizedBox(
+                      width: width/36,
+                      child: Image.asset(widget.rightImg, fit: BoxFit.contain),
+                    ),
+                  ],
                 ),
+              ),
 
-                Positioned(
-                  // right: 0,
+              Positioned(
 
-                  top: 120,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      SizedBox(
-                        width: 270,
-                        child: Image.asset(widget.bigImage, fit: BoxFit.contain),
-                      ),
-                    ],
-                  ),
+                top: height/6.16,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    SizedBox(
+                      width: width/1.4450,
+                      child: Image.asset(widget.bigImage, fit: BoxFit.contain),
+                    ),
+                  ],
                 ),
-
-
-
-
-
-
-
-
-              ],
-            ),
+              ),
+            ],
           ),
         ),
         /// Contenet
         Container(
-          height: 380,
-          child: ColorFiltered(
-            colorFilter: ColorFilter.mode(
-              Color(0xffF3F7FE).withOpacity(0.3),
-              BlendMode.darken,
-            ),
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                Positioned.fill(
-                  child: Image.asset(
-                    'assets/bigBox.png',
-                    fit: BoxFit.cover,
-                  ),
+          height: height/1.94,
+          child: Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              Positioned.fill(
+                child: Image.asset(
+                  'assets/bigBox.png',
+                  fit: BoxFit.cover,
                 ),
+              ),
+              Positioned(
+                // right: 0,
+                top: 0,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Column(
+                      children: [
+                        SizedBox(height: 20,),
+                        Padding(
+                          padding: EdgeInsets.only(left: width/36, right: width/36),
+                          child: Container(
+                            width: width/1.028,
 
-
-
-                Positioned(
-                  // right: 0,
-                  top: 0,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(height: 20,),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10, right: 10),
-                            child: Container(
-                              width: 350,
-
-                              child: Center(
-                                child: RichText(
-                                  text: TextSpan(
-                                    style: GoogleFonts.sofiaSans(
-                                      color: Color(0xff1666AD),
-                                      fontSize: 25,
-                                    ),
-                                    children: <TextSpan>[
-                                      TextSpan(text: widget.blueW, style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 25)),
-                                      TextSpan(
-                                        text: widget.blackW,
-                                        style: GoogleFonts.sofiaSans(
-                                          color: Colors.black,
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.w800,
-                                        ),
-                                      ),
-
-                                    ],
+                            child: Center(
+                              child: RichText(
+                                text: TextSpan(
+                                  style: GoogleFonts.sofiaSans(
+                                    color: Color(0xff1666AD),
+                                    fontSize: 25,
                                   ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 20,),
-                          Container(
-                            width: 350,
-                            child: Text(
-                            widget.content,
-                              style: GoogleFonts.sofiaSans(
-                                  color: Color(0xff151515).withOpacity(0.7), fontSize: 16),
-                              textAlign: TextAlign.start,
-                            ),
-                          ),
-                          SizedBox(height: 20,),
-                          Padding(
-                            padding: EdgeInsets.only(),
-                            child: NeoPopButton(
-                              color: Color(0xff1666AD),
-                              onTapDown: () {
-                                Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                        builder: (context) => ContactUs()));
-                              },
-                              onTapUp: () {},
-                              child: SizedBox(
-                                height: 40,
-                                width: 150,
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "View Details"
-                                          " ...",
+                                  children: <TextSpan>[
+                                    TextSpan(text: widget.blueW, style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 25)),
+                                    TextSpan(
+                                      text: widget.blackW,
                                       style: GoogleFonts.sofiaSans(
-                                          color: Color(0xffFFFFFF),
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500),
+                                        color: Colors.black,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.w800,
+                                      ),
                                     ),
 
                                   ],
@@ -219,35 +134,61 @@ class _ReusableProductState extends State<ReusableProduct> {
                               ),
                             ),
                           ),
+                        ),
+                        SizedBox(height: 20,),
+                        Container(
+                          width: width/1.028,
+                          child: Text(
+                          widget.content,
+                            style: GoogleFonts.sofiaSans(
+                                color: Color(0xff151515).withOpacity(0.7), fontSize: 16),
+                            textAlign: TextAlign.start,
+                          ),
+                        ),
+                        SizedBox(height: 20,),
+                        NeoPopButton(
+                          color: Color(0xff1666AD),
+                          onTapDown: () {
+                            Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context) => Scaffold(body: ContactPageM(),)));
+                          },
+                          onTapUp: () {},
+                          child: SizedBox(
+                            height: height/18.5,
+                            width: width/240,
+                            child: Row(
+                              mainAxisAlignment:
+                              MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "View Details"
+                                      " ...",
+                                  style: GoogleFonts.sofiaSans(
+                                      color: Color(0xffFFFFFF),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
 
-                        ],
-                      )
-                    ],
-                  ),
+                      ],
+                    )
+                  ],
                 ),
+              ),
 
-                Positioned(
-                  top: 120,
-                  left: 40,
-                  child: SizedBox(
-                    width: 300,
-                    child: Image.asset('assets/Group 73.png', fit: BoxFit.contain),
-                  ),
+              Positioned(
+                top: height/6.16,
+                left: width/940,
+                child: SizedBox(
+                  width: width/1.2,
+                  child: Image.asset('assets/Group 73.png', fit: BoxFit.contain),
                 ),
-
-
-
-
-
-
-
-
-
-
-
-
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ],

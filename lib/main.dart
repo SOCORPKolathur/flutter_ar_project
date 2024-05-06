@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'AR Digital Solutions',
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(color: Colors.white, foregroundColor: Colors.white, elevation: 0),
+        // appBarTheme: const AppBarTheme(color: Colors.white, foregroundColor: Colors.white, elevation: 0),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),

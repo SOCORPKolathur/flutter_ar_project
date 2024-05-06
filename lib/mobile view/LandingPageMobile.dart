@@ -22,7 +22,7 @@ class _LandingScreenMobileState extends State<LandingScreenMobile> with SingleTi
   void initState() {
     super.initState();
     _controller = FancyDrawerController(
-        vsync: this, duration: Duration(milliseconds: 250))
+        vsync: this, duration: const Duration(milliseconds: 250))
       ..addListener(() {
         setState(() {});
       });
@@ -41,7 +41,6 @@ class _LandingScreenMobileState extends State<LandingScreenMobile> with SingleTi
     double width = MediaQuery.of(context).size.width;
     return Material(
       child: FancyDrawerWrapper(
-
         backgroundColor: Colors.white,
         controller: _controller,
         drawerItems: <Widget>[
@@ -154,11 +153,11 @@ class _LandingScreenMobileState extends State<LandingScreenMobile> with SingleTi
                   ),
                 ],)),
 
-          body: page=="Home"? MobileHome() :
-          page=="Aboutus"? aboutusPage() :
-          page=="Our products"? ProductGuideM() :
-          page=="Carriers"? CareerPageM() :
-          ContactPageM()
+          body: page=="Home"? const MobileHome() :
+          page=="Aboutus"? const aboutusPage() :
+          page=="Our products"? const ProductGuideM() :
+          page=="Carriers"? const CareerPageM() :
+          const ContactPageM()
         ),
       ),
     );

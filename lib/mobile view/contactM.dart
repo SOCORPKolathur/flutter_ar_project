@@ -1,8 +1,11 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ar_project/mobile%20view/footerM.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:neopop/widgets/buttons/neopop_button/neopop_button.dart';
 import 'package:quickalert/models/quickalert_type.dart';
 import 'package:quickalert/widgets/quickalert_dialog.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 class ContactPageM extends StatefulWidget {
   const ContactPageM({super.key});
@@ -13,6 +16,14 @@ class ContactPageM extends StatefulWidget {
 
 class _ContactPageMState extends State<ContactPageM> {
 
+  bool con1 = false;
+  bool con2 = false;
+  bool con3 = false;
+  bool con4 = false;
+  bool con5 = false;
+  bool image = false;
+  bool text  = false;
+  
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
 
   TextEditingController name = TextEditingController();
@@ -66,15 +77,9 @@ class _ContactPageMState extends State<ContactPageM> {
                     SizedBox(
                       width: width/1.56,
                       height: height/6.17,
-                      child: ColorFiltered(
-                        colorFilter: ColorFilter.mode(
-                          Color(0xffF3F7FE).withOpacity(0.2),
-                          BlendMode.multiply,
-                        ),
-                        child: Image.asset(
-                          'assets/bigBox.png',
-                          fit: BoxFit.cover,
-                        ),
+                      child: Image.asset(
+                        'assets/bigBox.png',
+                        fit: BoxFit.cover,
                       ),
                     ),
                     Positioned(
@@ -82,38 +87,42 @@ class _ContactPageMState extends State<ContactPageM> {
                       top: 0,
                       child: Stack(
                         children: [
-                          SizedBox(
-                            width: width/4.9,
-                            child: Image.asset('assets/Group 10.png', fit: BoxFit.contain),
+                          FadeInLeftBig(
+                            child: SizedBox(
+                              width: width/4.9,
+                              child: Image.asset('assets/Group 10.png', fit: BoxFit.contain),
+                            ),
                           ),
                         ],
                       ),
                     ),
                     Positioned(
-                      top: height/160.6,
-                      left: width/3.73,
+                      top: height/14.8,
+                      left: width/4.5,
                       child: Container(
                         width: width/1.30,
-                        child: RichText(
-                          text: TextSpan(
-                            style: GoogleFonts.sofiaSans(
-                              color: Colors.black,
-                              fontSize: 28,
-                            ),
-                            children: <TextSpan>[
-                              TextSpan(text: 'Contact ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 28,
-                                color: Color(0xff1666AD),
-                              )),
-                              TextSpan(
-                                text: 'Us',
-                                style: GoogleFonts.sofiaSans(
-                                  color: Colors.black,
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w800,
-                                ),
+                        child: FadeInRightBig(
+                          child: RichText(
+                            text: TextSpan(
+                              style: GoogleFonts.sofiaSans(
+                                color: Colors.black,
+                                fontSize: 28,
                               ),
-
-                            ],
+                              children: <TextSpan>[
+                                TextSpan(text: 'Contact ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 28,
+                                  color: Color(0xff1666AD),
+                                )),
+                                TextSpan(
+                                  text: 'Us',
+                                  style: GoogleFonts.sofiaSans(
+                                    color: Colors.black,
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w800,
+                                  ),
+                                ),
+                          
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -151,9 +160,11 @@ class _ContactPageMState extends State<ContactPageM> {
                           top: height/5.01,
                           left: width/4.35,
                           child:
-                          Container(
-                            width: width/1.50,
-                            child: Image.asset('assets/Vector 6 (1).png'),
+                          FadeInUpBig(
+                            child: Container(
+                              width: width/1.50,
+                              child: Image.asset('assets/Vector 6 (1).png'),
+                            ),
                           ),
                         ),
 
@@ -161,10 +172,12 @@ class _ContactPageMState extends State<ContactPageM> {
                           top: height/7.3,
                           right: width/13.06,
                           child:
-                          Container(
-                            width: width/9.8,
-                            height: height/20.07,
-                            color: Color(0xffFFD670),
+                          FadeInRightBig(
+                            child: Container(
+                              width: width/9.8,
+                              height: height/20.07,
+                              color: Color(0xffFFD670),
+                            ),
                           ),
                         ),
 
@@ -175,10 +188,12 @@ class _ContactPageMState extends State<ContactPageM> {
                           bottom: height/5.73,
                           left: width/9.80,
                           child:
-                          Container(
-                            width: width/9.8,
-                            height: height/20.07,
-                            color: Color(0xffFEB5E7),
+                          FadeInLeftBig(
+                            child: Container(
+                              width: width/9.8,
+                              height: height/20.07,
+                              color: Color(0xffFEB5E7),
+                            ),
                           ),
                         ),
 
@@ -199,121 +214,118 @@ class _ContactPageMState extends State<ContactPageM> {
                           top: height/6.42,
                           left: width/7.12,
                           child:
-                          Container(
-                            width: width/1.50,
-                            child: Image.asset('assets/Mask group (12).png'),
+                          FadeInDownBig(
+                            child: Container(
+                              width: width/1.50,
+                              child: Image.asset('assets/Mask group (12).png'),
+                            ),
                           ),
                         ),
 
                         /// last container
 
                         Positioned(
-                          bottom: height/53.53,
-                          left: width/6.53,
+                          bottom: height/88.53,
+                          left: width/12,
                           child:
                           Container(
-                            width: width/1.50,
+                            width: width/1.2,
                             child: Image.asset('assets/Vector 8.png'),
                           ),
                         ),
-
+                        // ----
                         Positioned(
-                          bottom: height/34.91,
-                          left: width/3.92,
+                          top: height/1.897,
+                          left: width/6,
                           child:
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               children: [
-                                Icon(Icons.mail, color: Colors.white, size: 15,),
-                                SizedBox(width: width/39.2,),
-                                Text('xyz@gmail.com', style: GoogleFonts.sofiaSans(color: Colors.white),)
-                              ],
-                            ),
-                            SizedBox(height: height/80.3,),
-                            Row(
-                              children: [
                                 Icon(Icons.phone, color: Colors.white, size: 15,),
                                 SizedBox(width: width/39.2,),
-                                Text('9944627120', style: GoogleFonts.sofiaSans(color: Colors.white),)
+                                Text('+91 98848 90121', style: GoogleFonts.sofiaSans(color: Colors.white),)
                               ],
                             ),
+                            // SizedBox(height: height/80.3,),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Icon(Icons.location_on_sharp, color: Colors.white, size: 15,),
+                                    SizedBox(width: width/39.2,),
+                                    Container(
+                                        width: width/1.44 ,
+                                        height: height/11.3846,
+                                        child: Text('No 38, Kumaran Nagar 1st Street, [P.O] Jaawahar Nagar, Chennai - 600082', style: GoogleFonts.sofiaSans(color: Colors.white),)),
+
+                                  ],
+                                ),
+                            SizedBox(height: height/80.3,),
                           ],
                         )
                         ),
 
-                        Positioned(
-                          bottom: height/21.13,
-                          left: width/1.63,
-                          child:
-                          Container(
-                            width: width/1.50,
-                            child: Row(
-                              children: [
-                                Image.asset('assets/Social icon.png', scale: 1.5,),
-                                SizedBox(width: width/39.2,),
-                                Image.asset('assets/Group (13).png', scale: 1.5,),
-                                SizedBox(width: width/39.2,),
-
-                                Image.asset('assets/Social icon (1).png', scale: 1.5,),
-                                SizedBox(width: width/39.2,),
-                              ],
-                            )
-                          ),
-                        ),
                       ],
                     ),
                   ],
                 ),
               ),
+
+
               Container(
                 height: height/3.49,
                 color: Color(0xffF3F7FE),
                 child: Stack(
                   children: [
-                    Positioned(
-                      top: height/26.76,
-                      right: width/5.6,
-                      child:
-                      Container(
-                        width: width/1.56,
-                        child: Image.asset('assets/Group 10 (3).png'),
-                      ),
-                    ),
-                    Positioned(
-                        top: height/11.47,
-                        left: width/2.8,
-                        child: Text('CONTACT US', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 18, color: Color(0xff1666AD)),)),
+
+
 
                     Positioned(
-                      top: height/6.17,
-                      left: width/3.01,
-                      child: Container(
-                        width: width/1.30,
-                        child: RichText(
-                          text: TextSpan(
-                            style: GoogleFonts.sofiaSans(
-                              color: Colors.black,
-                              fontSize: 28,
-                            ),
-                            children: <TextSpan>[
-                              TextSpan(text: 'Contact ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 28,
-                                color: const Color(0xff1666AD),
-                              )),
-                              TextSpan(
-                                text: 'Us',
-                                style: GoogleFonts.sofiaSans(
-                                  color: Colors.black,
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                            ],
-                          ),
+                        top: height/26.76,
+                        right: width/5.6,
+                        child: Stack(
+                          alignment: Alignment.center
+                          ,
+                      children: [
+                        Container(
+                          width: width/1.56,
+                          child: Image.asset('assets/Group 10 (3).png'),
                         ),
-                      ),
-                    ),
+                        Padding(
+                          padding: EdgeInsets.only(top: height/27.777),
+                          child: Text('CONTACT US', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 18, color: Color(0xff1666AD)),),
+                        ),
+                      ],
+                    )),
+                    // Positioned(
+                    //   top: height/6.17,
+                    //   left: width/3.01,
+                    //   child: Container(
+                    //     width: width/1.30,
+                    //     child: RichText(
+                    //       text: TextSpan(
+                    //         style: GoogleFonts.sofiaSans(
+                    //           color: Colors.black,
+                    //           fontSize: 28,
+                    //         ),
+                    //         children: <TextSpan>[
+                    //           TextSpan(text: 'Contact ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 28,
+                    //             color: const Color(0xff1666AD),
+                    //           )),
+                    //           TextSpan(
+                    //             text: 'Us',
+                    //             style: GoogleFonts.sofiaSans(
+                    //               color: Colors.black,
+                    //               fontSize: 28,
+                    //               fontWeight: FontWeight.w800,
+                    //             ),
+                    //           ),
+                    //         ],
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
 
                     Positioned(
                       top: height/4.72,
@@ -321,7 +333,9 @@ class _ContactPageMState extends State<ContactPageM> {
                       child: Container(
                         width: width/1.30,
                         child: 
-                        Text('We are here for you! How can we help?', style: GoogleFonts.sofiaSans(color: Color(0xff151515).withOpacity(0.6), fontSize: 17),)
+                        Text('We are here for you! How can we help?',
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.sofiaSans(color: Color(0xff151515).withOpacity(0.6), fontSize: 17),)
                       ),
                     ),
                     
@@ -510,487 +524,901 @@ class _ContactPageMState extends State<ContactPageM> {
               /// 2nd Big Container(Stack)
               Container(
                 height: height/2.11,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.multiply,
-                  ),
-                  child: Stack(
-                    alignment: Alignment.topCenter,
-                    children: [
-                      Positioned.fill(
-                        child: Image.asset(
-                          'assets/bigBox.png',
-                          fit: BoxFit.cover,
-                        ),
+                child: Stack(
+                  alignment: Alignment.topCenter,
+                  children: [
+                    Positioned.fill(
+                      child: Image.asset(
+                        'assets/bigBox.png',
+                        fit: BoxFit.cover,
                       ),
-                      Positioned(
-                        left: width/5.6,
-                        top: height/14.6,
-                        child: Stack(
-                          children: [
-                            SizedBox(
-                              width: width/26.13,
-                              child: Image.asset('assets/Ellipse 9.png', fit: BoxFit.contain),
+                    ),
+                    Positioned(
+                      left: width/5.6,
+                      top: height/14.6,
+                      child: Stack(
+                        children: [
+                          SizedBox(
+                            width: width/26.13,
+                            child: Image.asset('assets/Ellipse 9.png', fit: BoxFit.contain),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Positioned(
+                      right: 0,
+                      top: 0,
+                      child: Stack(
+                        children: [
+                          SizedBox(
+                            width: width/4.9,
+                            child: Image.asset('assets/Dot Ornament.png', fit: BoxFit.contain),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    Positioned(
+                      right: width/19.6,
+                      top: height/32.125,
+                      child: Stack(
+                        children: [
+                          SizedBox(
+                            width: width/4.350,
+                            child: Image.asset('assets/Group 9 (2).png', fit: BoxFit.contain),
+                          ),
+                        ],
+                      ),
+                    ),
+                    /// left ...
+                    Positioned(
+                      left: width/4.35,
+                      top: height/8.92,
+                      child: Stack(
+                        alignment: Alignment.centerRight,
+                        children: [
+                          SizedBox(
+                            width: width/1.78,
+                            child: Image.asset('assets/Rectangle 32.png', fit: BoxFit.contain),
+                          ),
+                        ],
+                      ),
+                    ),
+                    /// Down hands man...
+
+                    Positioned(
+                      left: width/6.53,
+                      top: height/8.72,
+                      child: Stack(
+                        alignment: Alignment.centerRight,
+                        children: [
+                          VisibilityDetector(
+
+                            key: Key('c1'),
+                            onVisibilityChanged: (visibilityInfo) {
+                              var visiblePercentage = visibilityInfo.visibleFraction * 100;
+                              if (visiblePercentage > 38) {
+                                setState(() {
+                                  con1 = true;
+                                });
+                              }
+                              debugPrint(
+                                  'Widget ${visibilityInfo.key} is ${visiblePercentage}% visible');
+                            },
+                            child: FadeInDownBig(
+                              duration: Duration(milliseconds: 700),
+                              animate: con1,
+                              child: SizedBox(
+                                width: width/1.4,
+                                child: Image.asset('assets/manDownhands.png', fit: BoxFit.contain),
+                              ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      Positioned(
-                        right: 0,
-                        top: 0,
-                        child: Stack(
-                          children: [
-                            SizedBox(
-                              width: width/4.9,
-                              child: Image.asset('assets/Dot Ornament.png', fit: BoxFit.contain),
-                            ),
-                          ],
-                        ),
-                      ),
-
-                      Positioned(
-                        right: width/19.6,
-                        top: height/32.125,
-                        child: Stack(
-                          children: [
-                            SizedBox(
-                              width: width/4.350,
-                              child: Image.asset('assets/Group 9 (2).png', fit: BoxFit.contain),
-                            ),
-                          ],
-                        ),
-                      ),
-                      /// left ...
-                      Positioned(
-                        left: width/4.35,
-                        top: height/8.92,
-                        child: Stack(
-                          alignment: Alignment.centerRight,
-                          children: [
-                            SizedBox(
-                              width: width/1.78,
-                              child: Image.asset('assets/Rectangle 32.png', fit: BoxFit.contain),
-                            ),
-                          ],
-                        ),
-                      ),
-                      /// Down hands man...
-
-                      Positioned(
-                        left: width/6.53,
-                        top: height/8.72,
-                        child: Stack(
-                          alignment: Alignment.centerRight,
-                          children: [
-                            SizedBox(
-                              width: width/1.4,
-                              child: Image.asset('assets/manDownhands.png', fit: BoxFit.contain),
-                            ),
-                          ],
-                        ),
-                      ),
+                    ),
 
 
 
 
 
 
-                    ],
-                  ),
+                  ],
                 ),
               ),
 
 
               Container(
                 height: height/2.67,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.multiply,
-                  ),
-                  child: Stack(
-                    alignment: Alignment.topCenter,
-                    children: [
-                      Positioned.fill(
-                        child: Image.asset(
-                          'assets/bigBox.png',
-                          fit: BoxFit.cover,
-                        ),
+                child: Stack(
+                  alignment: Alignment.topCenter,
+                  children: [
+                    Positioned.fill(
+                      child: Image.asset(
+                        'assets/bigBox.png',
+                        fit: BoxFit.cover,
                       ),
-                      Positioned(
-                        top: height/26.76,
-                        right: width/5.6,
-                        child:
-                        Container(
-                          width: width/1.56,
-                          child: Image.asset('assets/Group 10 (3).png'),
-                        ),
-                      ),
-                      Positioned(
-                          top: height/11.47,
-                          right: width/2.30,
-                          child: Text('FAQs', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 18, color: Color(0xff1666AD)),)),
-                      Positioned(
-                        top: height/6.17,
-                        left: width/5.6,
-                        child: Container(
-                          width: width/1.30,
-                          child: RichText(
-                            text: TextSpan(
-                              style: GoogleFonts.sofiaSans(
-                                color: Colors.black,
-                                fontSize: 28,
-                              ),
-                              children: <TextSpan>[
-                                TextSpan(text: 'Have Any ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 28,
-                                  color: Colors.black,
-                                )),
-                                TextSpan(
-                                  text: 'Questions?',
-                                  style: GoogleFonts.sofiaSans(
-                                    color: const Color(0xff1666AD),
-
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.w800,
-                                  ),
-                                ),
-                              ],
+                    ),
+                  
+                    Positioned(
+                      top: height/6.17,
+                      left: width/5.6,
+                      child: Container(
+                        width: width/1.30,
+                        child: RichText(
+                          text: TextSpan(
+                            style: GoogleFonts.sofiaSans(
+                              color: Colors.black,
+                              fontSize: 28,
                             ),
+                            children: <TextSpan>[
+                              TextSpan(text: 'Have Any ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 28,
+                                color: Colors.black,
+                              )),
+                              TextSpan(
+                                text: 'Questions?',
+                                style: GoogleFonts.sofiaSans(
+                                  color: const Color(0xff1666AD),
+
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                      Positioned(
-                        top: height/4.72,
-                        left: width/11.2,
-                        child: Container(
-                            width: width/1.22,
-                            child:
-                            Text('"Quick Solutions to Your Common Queries"', style: GoogleFonts.sofiaSans(color: Color(0xff151515).withOpacity(0.6), fontSize: 17),)
-                        ),
-                      ),
+                    ),
+                    Positioned(
+                      top: height/4.72,
+                      left: width/11.2,
+                      child: Container(
+                          width: width/1.22,
+                          child:
+                          Text('"Quick Solutions to Your Common Queries"',
 
-                      Positioned(
-                        bottom: height/17.84,
-                        right: width/7.84,
-                        child:
-                        Container(
-                          width: width/1.26,
-                          child: Image.asset('assets/Group 73.png'),
-                        ),
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.sofiaSans(color: Color(0xff151515).withOpacity(0.6), fontSize: 17),)
                       ),
+                    ),
+                    
+                    
+                    Positioned(
+                        top: height/26.76,
+                        right: width/5.6,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                      Container(
+                        width: width/1.56,
+                        child: Image.asset('assets/Group 10 (3).png'),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: height/27.777),
+                        child: Text('FAQs', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 18, color: Color(0xff1666AD)),),
+                      ),
+                    ],)),
 
-                      Positioned(
-                        bottom: height/40.15,
-                        right: width/2.30,
-                        child:
-                        Container(
-                          width: width/9.8,
-                          child: Image.asset('assets/Vector 3 (2).png'),
-                        ),
+                    Positioned(
+                      bottom: height/17.84,
+                      right: width/7.84,
+                      child:
+                      Container(
+                        width: width/1.26,
+                        child: Image.asset('assets/Group 73.png'),
                       ),
-                    ],
-                  ),
+                    ),
+                    Positioned(
+                      bottom: height/40.15,
+                      right: width/2.30,
+                      child:
+                      Container(
+                        width: width/9.8,
+                        child: Image.asset('assets/Vector 3 (2).png'),
+                      ),
+                    ),
+                  ],
                 ),
               ),
 
 
               /// FAQs Questions...
 
-              Container(
-                height: height/4.01,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.multiply,
-                  ),
-                  child: Stack(
-                    alignment: Alignment.topCenter,
-                    children: [
-                      Positioned.fill(
-                        child: Image.asset(
-                          'assets/bigBox.png',
-                          fit: BoxFit.cover,
+              // AnimatedContainer(
+              //   height: height/4.01,
+              //   duration: const Duration(milliseconds: 600),
+              //   child: Stack(
+              //     alignment: Alignment.topCenter,
+              //     children: [
+              //       Positioned.fill(
+              //         child: Image.asset(
+              //           'assets/bigBox.png',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //       Positioned(
+              //         child:
+              //         Container(
+              //           height:  con1 == true
+              //               ?  height/4.46 : height/11.47,
+              //           width: width/1.12,
+              //           color: Color(0xff1666AD),
+              //           child: ListTile(
+              //             title: Row(
+              //               children: [
+              //                 Container(
+              //                   width: width/1.4,
+              //                   child: Text('How can a hostel management software benefit our facility?',
+              //                   style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+              //                   ),
+              //                 ),
+              //                 Row(
+              //                   mainAxisAlignment: MainAxisAlignment.end,
+              //                   children: [
+              //
+              //                     con1 == true
+              //                         ?
+              //
+              //                     InkWell(
+              //                       onTap: (){
+              //                         setState(() {
+              //                           con1 = !con1;
+              //                         });
+              //                       },
+              //                       child: CircleAvatar(
+              //                         radius: 12,
+              //                         backgroundColor: const Color(0xffFFFFFF),
+              //                         child: Image.asset(
+              //                           "assets/Group 10 (5).png",
+              //                         ),
+              //                       ),
+              //                     ) :
+              //                     InkWell(
+              //                       onTap: (){
+              //                         setState(() {
+              //                           con1 = !con1;
+              //                         });
+              //                       },
+              //                       child: CircleAvatar(
+              //                         radius: 12,
+              //                         backgroundColor: const Color(0xffFFFFFF),
+              //                         child: Image.asset(
+              //                           "assets/Group 10 (6).png",
+              //                         ),
+              //                       ),
+              //                     )
+              //                   ],
+              //                 ),
+              //               ],
+              //             ),
+              //             subtitle:     con1 == true
+              //                 ?
+              //             Padding(
+              //               padding:  EdgeInsets.only(top: height/100.37),
+              //               child: Text('A hostel management software simplifies tasks like room allocation, check-ins/check-outs, billing, and inventory. It boosts efficiency, minimizes errors, and enhances guest satisfaction.',
+              //                 style: GoogleFonts.sofiaSans(
+              //                     fontSize: 14.3,
+              //                     color: Color(0xffFFFFFF).withOpacity(0.8)),
+              //               ),
+              //             ) :
+              //             Padding(
+              //               padding:  EdgeInsets.only(top: height/100.37),
+              //               child: Text('',
+              //                 style: GoogleFonts.sofiaSans(
+              //                     fontSize: 14.3,
+              //                     color: Color(0xffFFFFFF).withOpacity(0.8)),
+              //               ),
+              //             )
+              //
+              //           ),
+              //         ),
+              //       ),
+              //
+              //     ],
+              //   ),
+              // ),
+
+              Column(
+                children: [
+                  AnimatedContainer(
+                    height:  con1 == true ? height/4.01 : height/11.47,
+                    duration: const Duration(milliseconds: 600),
+                    child: Stack(
+                      alignment: Alignment.topCenter,
+                      children: [
+                        Positioned.fill(
+                          child: Image.asset(
+                            'assets/bigBox.png',
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                      ),
-                      Positioned(
-                        child:
-                        Container(
-                          height: height/4.46,
-                          width: width/1.12,
-                          color: Color(0xff1666AD),
-                          child: ListTile(
+                        Positioned(
+                          child:
+                          Container(
+                            height:  con1 == true
+                                ?  height/4.46 : height/11.47,
+                            width: width/1.12,
+                            color: Color(0xff1666AD),
+                            child: ListTile(
+                                title: Row(
+                                  children: [
+                                    Container(
+                                      width: width/1.4,
+                                      child: Text('How can a hostel management software benefit our facility?',
+                                        style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
 
-                            title: Row(
-                              children: [
-                                Container(
-                                  width: width/1.4,
-                                  child: Text('How can a hostel management software benefit our facility?',
-                                  style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
-                                  ),
+                                        con1 == true
+                                            ?
+
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con1 = !con1;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (5).png",
+                                            ),
+                                          ),
+                                        ) :
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con1 = !con1;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (6).png",
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                                Icon(Icons.time_to_leave, color: Colors.white,),
-                              ],
-                            ),
-                            subtitle:  Padding(
-                              padding:  EdgeInsets.only(top: height/100.37),
-                              child: Text('A hostel management software streamlines administrative tasks such as room allocation, check-ins/check-outs, billing, and inventory management. It enhances efficiency, reduces errors, and improves overall guest satisfaction.',
+                                subtitle:     con1 == true
+                                    ?
+                                Padding(
+                                  padding:  EdgeInsets.only(top: height/100.37),
+                                  child: Text('A hostel management software simplifies tasks like room allocation, check-ins/check-outs, billing, and inventory. It boosts efficiency, minimizes errors, and enhances guest satisfaction.',
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 14.3,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                ) :
+                                Padding(
+                                  padding:  EdgeInsets.only(top: height/100.37),
+                                  child: Text('',
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 14.3,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                )
 
-
-                                style: GoogleFonts.sofiaSans(
-                                    fontSize: 14.3,
-                                    color: Color(0xffFFFFFF).withOpacity(0.8)),
-                              ),
                             ),
                           ),
                         ),
-                      ),
 
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ),
-
-              Container(
-                height: height/8.920,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.multiply,
+                  SizedBox(
+                    height: height / 32.05,
                   ),
-                  child: Stack(
-                    alignment: Alignment.topCenter,
-                    children: [
-                      Positioned.fill(
-                        child: Image.asset(
-                          'assets/bigBox.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Positioned(
-                        child:
-                        Container(
-                          height: height/11.47,
-                          width: width/1.12,
-                          color: Color(0xff1666AD),
-                          child: ListTile(
-
-                            title: Row(
-                              children: [
-                                Container(
-                                  width: width/1.4,
-                                  child: Text('What features does the mosque management software offer?',
-                                    style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
-                                  ),
-                                ),
-                                Icon(Icons.time_to_leave, color: Colors.white,),
-                              ],
-                            ),
-
+                  AnimatedContainer(
+                    height:  con2 == true ? height/4.01 : height/11.47,
+                    duration: const Duration(milliseconds: 600),
+                    child: Stack(
+                      alignment: Alignment.topCenter,
+                      children: [
+                        Positioned.fill(
+                          child: Image.asset(
+                            'assets/bigBox.png',
+                            fit: BoxFit.cover,
                           ),
                         ),
-                      ),
+                        Positioned(
+                          child:
+                          Container(
+                            height:  con2 == true
+                                ?  height/4.46 : height/11.47,
+                            width: width/1.12,
+                            color: Color(0xff1666AD),
+                            child: ListTile(
+                                title: Row(
+                                  children: [
+                                    Container(
+                                      width: width/1.4,
+                                      child: Text('How can a hostel management software benefit our facility?',
+                                        style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
 
-                    ],
-                  ),
-                ),
-              ),
+                                        con2 == true
+                                            ?
 
-              Container(
-                height: height/6.69,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.multiply,
-                  ),
-                  child: Stack(
-                    alignment: Alignment.topCenter,
-                    children: [
-                      Positioned.fill(
-                        child: Image.asset(
-                          'assets/bigBox.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Positioned(
-                        child:
-                        Container(
-                          height: height/8.45,
-                          width: width/1.12,
-                          color: Color(0xff1666AD),
-                          child: ListTile(
-
-                            title: Row(
-                              children: [
-                                Container(
-                                  width: width/1.4,
-                                  child: Text(' What functionalities does the school management software offer for academic administration?',
-                                    style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
-                                  ),
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con2 = !con2;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (5).png",
+                                            ),
+                                          ),
+                                        ) :
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con2 = !con2;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (6).png",
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                                Icon(Icons.time_to_leave, color: Colors.white,),
-                              ],
-                            ),
+                                subtitle:     con2 == true
+                                    ?
+                                Padding(
+                                  padding:  EdgeInsets.only(top: height/100.37),
+                                  child: Text('A hostel management software simplifies tasks like room allocation, check-ins/check-outs, billing, and inventory. It boosts efficiency, minimizes errors, and enhances guest satisfaction.',
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 14.3,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                ) :
+                                Padding(
+                                  padding:  EdgeInsets.only(top: height/100.37),
+                                  child: Text('',
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 14.3,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                )
 
+                            ),
                           ),
                         ),
-                      ),
 
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ),
-
-              Container(
-                height: height/6.69,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.multiply,
+                  SizedBox(
+                    height: height / 32.05,
                   ),
-                  child: Stack(
-                    alignment: Alignment.topCenter,
-                    children: [
-                      Positioned.fill(
-                        child: Image.asset(
-                          'assets/bigBox.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Positioned(
-                        child:
-                        Container(
-                          height: height/8.45,
-                          width: width/1.12,
-                          color: Color(0xff1666AD),
-                          child: ListTile(
-
-                            title: Row(
-                              children: [
-                                Container(
-                                  width: width/1.4,
-                                  child: Text('Is the software user-friendly for administrators who may not be tech-savvy?',
-                                    style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
-                                  ),
-                                ),
-                                Icon(Icons.time_to_leave, color: Colors.white,),
-                              ],
-                            ),
-
+                  AnimatedContainer(
+                    height:  con3 == true ? height/4.01 : height/11.47,
+                    duration: const Duration(milliseconds: 600),
+                    child: Stack(
+                      alignment: Alignment.topCenter,
+                      children: [
+                        Positioned.fill(
+                          child: Image.asset(
+                            'assets/bigBox.png',
+                            fit: BoxFit.cover,
                           ),
                         ),
-                      ),
+                        Positioned(
+                          child:
+                          Container(
+                            height:  con3 == true
+                                ?  height/4.46 : height/11.47,
+                            width: width/1.12,
+                            color: Color(0xff1666AD),
+                            child: ListTile(
+                                title: Row(
+                                  children: [
+                                    Container(
+                                      width: width/1.4,
+                                      child: Text('How can a hostel management software benefit our facility?',
+                                        style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
 
-                    ],
-                  ),
-                ),
-              ),
+                                        con3 == true
+                                            ?
 
-
-
-              Container(
-                height: height/8.920,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.multiply,
-                  ),
-                  child: Stack(
-                    alignment: Alignment.topCenter,
-                    children: [
-                      Positioned.fill(
-                        child: Image.asset(
-                          'assets/bigBox.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Positioned(
-                        child:
-                        Container(
-                          height: height/11.47,
-                          width: width/1.12,
-                          color: Color(0xff1666AD),
-                          child: ListTile(
-
-                            title: Row(
-                              children: [
-                                Container(
-                                  width: width/1.4,
-                                  child: Text('How secure is the data stored in the church management software?',
-                                    style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
-                                  ),
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con3 = !con3;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (5).png",
+                                            ),
+                                          ),
+                                        ) :
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con3 = !con3;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (6).png",
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                                Icon(Icons.time_to_leave, color: Colors.white,),
-                              ],
-                            ),
+                                subtitle:     con3 == true
+                                    ?
+                                Padding(
+                                  padding:  EdgeInsets.only(top: height/100.37),
+                                  child: Text('A hostel management software simplifies tasks like room allocation, check-ins/check-outs, billing, and inventory. It boosts efficiency, minimizes errors, and enhances guest satisfaction.',
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 14.3,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                ) :
+                                Padding(
+                                  padding:  EdgeInsets.only(top: height/100.37),
+                                  child: Text('',
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 14.3,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                )
 
+                            ),
                           ),
                         ),
-                      ),
 
-                    ],
+                      ],
+                    ),
                   ),
-                ),
+                  SizedBox(
+                    height: height / 32.05,
+                  ),
+                  AnimatedContainer(
+                    height:  con4 == true ? height/4.01 : height/11.47,
+                    duration: const Duration(milliseconds: 600),
+                    child: Stack(
+                      alignment: Alignment.topCenter,
+                      children: [
+                        Positioned.fill(
+                          child: Image.asset(
+                            'assets/bigBox.png',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Positioned(
+                          child:
+                          Container(
+                            height:  con4 == true
+                                ?  height/4.46 : height/11.47,
+                            width: width/1.12,
+                            color: Color(0xff1666AD),
+                            child: ListTile(
+                                title: Row(
+                                  children: [
+                                    Container(
+                                      width: width/1.4,
+                                      child: Text('How can a hostel management software benefit our facility?',
+                                        style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+
+                                        con4 == true
+                                            ?
+
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con4 = !con4;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (5).png",
+                                            ),
+                                          ),
+                                        ) :
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con4 = !con4;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (6).png",
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                subtitle:     con4 == true
+                                    ?
+                                Padding(
+                                  padding:  EdgeInsets.only(top: height/100.37),
+                                  child: Text('A hostel management software simplifies tasks like room allocation, check-ins/check-outs, billing, and inventory. It boosts efficiency, minimizes errors, and enhances guest satisfaction.',
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 14.3,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                ) :
+                                Padding(
+                                  padding:  EdgeInsets.only(top: height/100.37),
+                                  child: Text('',
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 14.3,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                )
+
+                            ),
+                          ),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: height / 32.05,
+                  ),
+
+
+
+                ],
               ),
+
+
+
+              //
+              // Container(
+              //   height: height/8.920,
+              //   child: Stack(
+              //     alignment: Alignment.topCenter,
+              //     children: [
+              //       Positioned.fill(
+              //         child: Image.asset(
+              //           'assets/bigBox.png',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //       Positioned(
+              //         child:
+              //         Container(
+              //           height: height/11.47,
+              //           width: width/1.12,
+              //           color: Color(0xff1666AD),
+              //           child: ListTile(
+              //
+              //             title: Row(
+              //               children: [
+              //                 Container(
+              //                   width: width/1.4,
+              //                   child: Text('What features does the mosque management software offer?',
+              //                     style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+              //                   ),
+              //                 ),
+              //                 Icon(Icons.time_to_leave, color: Colors.white,),
+              //               ],
+              //             ),
+              //
+              //           ),
+              //         ),
+              //       ),
+              //
+              //     ],
+              //   ),
+              // ),
+              // Container(
+              //   height: height/6.69,
+              //   child: Stack(
+              //     alignment: Alignment.topCenter,
+              //     children: [
+              //       Positioned.fill(
+              //         child: Image.asset(
+              //           'assets/bigBox.png',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //       Positioned(
+              //         child:
+              //         Container(
+              //           height: height/8.45,
+              //           width: width/1.12,
+              //           color: Color(0xff1666AD),
+              //           child: ListTile(
+              //
+              //             title: Row(
+              //               children: [
+              //                 Container(
+              //                   width: width/1.4,
+              //                   child: Text(' What functionalities does the school management software offer for academic administration?',
+              //                     style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+              //                   ),
+              //                 ),
+              //                 Icon(Icons.time_to_leave, color: Colors.white,),
+              //               ],
+              //             ),
+              //
+              //           ),
+              //         ),
+              //       ),
+              //
+              //     ],
+              //   ),
+              // ),
+              // Container(
+              //   height: height/6.69,
+              //   child: Stack(
+              //     alignment: Alignment.topCenter,
+              //     children: [
+              //       Positioned.fill(
+              //         child: Image.asset(
+              //           'assets/bigBox.png',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //       Positioned(
+              //         child:
+              //         Container(
+              //           height: height/8.45,
+              //           width: width/1.12,
+              //           color: Color(0xff1666AD),
+              //           child: ListTile(
+              //
+              //             title: Row(
+              //               children: [
+              //                 Container(
+              //                   width: width/1.4,
+              //                   child: Text('Is the software user-friendly for administrators who may not be tech-savvy?',
+              //                     style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+              //                   ),
+              //                 ),
+              //                 Icon(Icons.time_to_leave, color: Colors.white,),
+              //               ],
+              //             ),
+              //
+              //           ),
+              //         ),
+              //       ),
+              //
+              //     ],
+              //   ),
+              // ),
+              // Container(
+              //   height: height/8.920,
+              //   child: Stack(
+              //     alignment: Alignment.topCenter,
+              //     children: [
+              //       Positioned.fill(
+              //         child: Image.asset(
+              //           'assets/bigBox.png',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //       Positioned(
+              //         child:
+              //         Container(
+              //           height: height/11.47,
+              //           width: width/1.12,
+              //           color: Color(0xff1666AD),
+              //           child: ListTile(
+              //
+              //             title: Row(
+              //               children: [
+              //                 Container(
+              //                   width: width/1.4,
+              //                   child: Text('How secure is the data stored in the church management software?',
+              //                     style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+              //                   ),
+              //                 ),
+              //                 Icon(Icons.time_to_leave, color: Colors.white,),
+              //               ],
+              //             ),
+              //
+              //           ),
+              //         ),
+              //       ),
+              //
+              //     ],
+              //   ),
+              // ),
 
               /// iLLUSTRATION ONLY
               Container(
                 height: height/5.01,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    Color(0xffF3F7FE).withOpacity(0.3),
-                    BlendMode.multiply,
-                  ),
-                  child: Stack(
-                    alignment: Alignment.topCenter,
-                    children: [
-                      Positioned.fill(
-                        child: Image.asset(
-                          'assets/bigBox.png',
-                          fit: BoxFit.cover,
-                        ),
+                child: Stack(
+                  alignment: Alignment.topCenter,
+                  children: [
+                    Positioned.fill(
+                      child: Image.asset(
+                        'assets/bigBox.png',
+                        fit: BoxFit.cover,
                       ),
+                    ),
 
 
-                      /// left ...
-                      Positioned(
-                        left: width/15.68,
-                        top: 0,
-                        child: Stack(
-                          children: [
-                            SizedBox(
-                              width: width/4.9,
-                              child: Image.asset('assets/Group 10 (4).png', fit: BoxFit.contain),
-                            ),
-                          ],
-                        ),
+                    /// left ...
+                    Positioned(
+                      left: width/15.68,
+                      top: 0,
+                      child: Stack(
+                        children: [
+                          SizedBox(
+                            width: width/4.9,
+                            child: Image.asset('assets/Group 10 (4).png', fit: BoxFit.contain),
+                          ),
+                        ],
                       ),
+                    ),
 
-                      Positioned(
-                        right: width/5.22,
-                        top: height/26.76,
-                        child: Stack(
-                          children: [
-                            SizedBox(
-                              width: width/7.84,
-                              child: Image.asset('assets/Vector 3 (1).png', fit: BoxFit.contain),
-                            ),
-                          ],
-                        ),
+                    Positioned(
+                      right: width/5.22,
+                      top: height/26.76,
+                      child: Stack(
+                        children: [
+                          SizedBox(
+                            width: width/7.84,
+                            child: Image.asset('assets/Vector 3 (1).png', fit: BoxFit.contain),
+                          ),
+                        ],
                       ),
+                    ),
 
-                      Positioned(
-                        left: 0,
-                        bottom: 0,
-                        child: Stack(
-                          children: [
-                            SizedBox(
-                              width: width/3.01,
-                              child: Image.asset('assets/Dot Ornament.png', fit: BoxFit.contain),
-                            ),
-                          ],
-                        ),
+                    Positioned(
+                      left: 0,
+                      bottom: 0,
+                      child: Stack(
+                        children: [
+                          SizedBox(
+                            width: width/3.01,
+                            child: Image.asset('assets/Dot Ornament.png', fit: BoxFit.contain),
+                          ),
+                        ],
                       ),
+                    ),
 
 
 
@@ -998,160 +1426,11 @@ class _ContactPageMState extends State<ContactPageM> {
 
 
 
-                    ],
-                  ),
+                  ],
                 ),
               ),
               /// footer
-              Container(
-                height: height/1.67,
-                width: double.infinity,
-                color: Color(0xff003461),
-                child: Column(
-                  children: [
-                    SizedBox(height: height/40.15,),
-                    Image.asset('assets/AR Logo.png', scale: 6,),
-                    SizedBox(height: height/40.15,),
-                    Text('Explore Our Products', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 18,)),
-
-                    SizedBox(height: height/26.76,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text('Product', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),),
-                        Text('Company', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),),
-                        Text('Legal', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),),
-                        Text('Serial', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),),
-                      ],
-                    ),
-                    SizedBox(height: height/40.15,),
-
-                    Padding(
-                      padding:  EdgeInsets.only(left: width/11.2, right: 0, top: height/200.75, bottom: height/200.75),
-
-                      child: Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          SizedBox(
-                              width: width/3.92,
-                              child: Text('Overview', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              width: width/3.92,
-                              child: Text('About Us', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              width: width/4.9,
-                              child: Text('Terms', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              child: Text('Twitter', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding:  EdgeInsets.only(left: width/11.2, right: 0, top: height/200.75, bottom: height/200.75),
-
-                      child: Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          SizedBox(
-                              width: width/3.92,
-                              child: Text('Features', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              width: width/3.92,
-                              child: Text('Careers', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              width: width/4.9,
-                              child: Text('Privacy', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              child: Text('Linkedin', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding:  EdgeInsets.only(left: width/11.2, right: 0, top: height/200.75, bottom: height/200.75),
-
-                      child: Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          SizedBox(
-                              width: width/3.92,
-                              child: Text('Solutions', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              width: width/3.92,
-                              child: Text('', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              width: width/4.9,
-                              child: Text('Cookies', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              child: Text('GitHub', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding:  EdgeInsets.only(left: width/11.2, right: 0, top: height/200.75, bottom: height/200.75),
-
-                      child: Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          SizedBox(
-                              width: width/3.92,
-                              child: Text('Tutorials', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              width: width/3.92,
-                              child: Text('', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              width: width/4.9,
-                              child: Text('Contact', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              child: Text('Dribble', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: width/11.2, right: 0, top: height/200.75, bottom: height/200.75),
-                      child: Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          SizedBox(
-                              width: width/3.92,
-                              child: Text('Pricing', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              width: width/3.92,
-                              child: Text('', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              width: width/4.9,
-                              child: Text('', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                          SizedBox(
-                              child: Text('', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3), fontSize: 17),)),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: height/40.15,),
-                    Padding(
-                      padding: EdgeInsets.only(left: width/19.6, right: width/19.6),
-                      child: Divider(color: Color(0xffFFFFFF).withOpacity(0.5),),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('© 2024 Ed-Circle. All rights reserved.', style: GoogleFonts.sofiaSans(color: Color(0xff98A2B3)),),
-                        SizedBox(width: width/13.06,),
-
-                        Image.asset('assets/Social icon.png', scale: 1.5,),
-                        SizedBox(width: width/39.2,),
-                        Image.asset('assets/Group (13).png', scale: 1.5,),
-                        SizedBox(width: width/39.2,),
-
-                        Image.asset('assets/Social icon (1).png', scale: 1.5,),
-                        SizedBox(width: width/39.2,),
-
-
-
-                      ],
-                    )
-                  ],
-                ),
-
-              )
+             FooterMobile(),
 
 
 
