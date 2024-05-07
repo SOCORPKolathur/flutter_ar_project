@@ -33,8 +33,6 @@ class _ProductGuideMState extends State<ProductGuideM> {
     bool c9 = false;
     bool c10 = false;
 
-
-
     //
     // key: Key('circlekey'),
     // onVisibilityChanged: (visibilityInfo) {
@@ -48,7 +46,7 @@ class _ProductGuideMState extends State<ProductGuideM> {
     // 'Widget ${visibilityInfo.key} is ${visiblePercentage}% visible');
     // },
 
-    return  SingleChildScrollView(
+    return SingleChildScrollView(
       child: Column(
         children: [
           // Container(
@@ -57,39 +55,39 @@ class _ProductGuideMState extends State<ProductGuideM> {
           // ),
           /// First Box
           Container(
-            height: height/1.74,
+            height: height / 1.74,
             color: const Color(0xffF3F7FE),
             width: double.infinity,
             child: Stack(
               children: [
                 SizedBox(
-                  width: width/1.56,
-                  height: height/6.17,
+                  width: width / 1.56,
+                  height: height / 6.17,
                   child: Image.asset(
                     'assets/bigBox.png',
                     fit: BoxFit.cover,
                   ),
                 ),
                 Positioned(
-                  left: width/39.2,
+                  left: width / 39.2,
                   top: 0,
                   child: Stack(
                     children: [
                       FadeInLeftBig(
                         child: SizedBox(
-                          width: width/3.92,
-                          child: Image.asset('assets/Group 10.png', fit: BoxFit.contain),
+                          width: width / 3.92,
+                          child: Image.asset('assets/Group 10.png',
+                              fit: BoxFit.contain),
                         ),
                       ),
                     ],
                   ),
                 ),
-
                 Positioned(
-                  top: height/12.355,
-                  left: width/3.73,
+                  top: height / 12.355,
+                  left: width / 3.73,
                   child: Container(
-                    width: width/1.30,
+                    width: width / 1.30,
                     child: FadeInRightBig(
                       // animate: c1,
                       child: RichText(
@@ -99,9 +97,13 @@ class _ProductGuideMState extends State<ProductGuideM> {
                             fontSize: 28,
                           ),
                           children: <TextSpan>[
-                            TextSpan(text: 'Product ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 28,
-                              color: const Color(0xff1666AD),
-                            )),
+                            TextSpan(
+                                text: 'Product ',
+                                style: GoogleFonts.sofiaSans(
+                                  fontWeight: FontWeight.w800,
+                                  fontSize: 28,
+                                  color: const Color(0xff1666AD),
+                                )),
                             TextSpan(
                               text: 'Guide',
                               style: GoogleFonts.sofiaSans(
@@ -116,64 +118,56 @@ class _ProductGuideMState extends State<ProductGuideM> {
                     ),
                   ),
                 ),
-
                 Positioned(
-                  top: height/11.470,
-                  right: width/6.530,
-                  child:
-                  Container(
-                    width: width/39.2,
+                  top: height / 11.470,
+                  right: width / 6.530,
+                  child: Container(
+                    width: width / 39.2,
                     child: Image.asset('assets/Polygon 3 (1).png'),
                   ),
                 ),
-
                 Positioned(
-                  top: height/5.73,
+                  top: height / 5.73,
                   right: 0,
-                  child:
-                  FadeInUpBig(
+                  child: FadeInUpBig(
                     child: Container(
-                      width: width/1.4,
+                      width: width / 1.4,
+
                       /// --- rose
                       child: Image.asset('assets/Vector 14.png'),
                     ),
                   ),
                 ),
-
                 Positioned(
-                  top: height/5.01,
+                  top: height / 5.01,
                   right: 0,
-                  child:
-                  FadeInRightBig(
+                  child: FadeInRightBig(
                     child: Container(
-                      width: width/1.4,
+                      width: width / 1.4,
                       child: Image.asset('assets/Vector 15.png'),
                     ),
                   ),
                 ),
-
                 Positioned(
-                  bottom: height/12.35,
+                  bottom: height / 12.35,
                   right: 0,
-                  child:
-                  FadeInUpBig(
+                  child: FadeInUpBig(
                     child: Container(
-                      width: width/1.56,
+                      width: width / 1.56,
+
                       /// --- blue
                       child: Image.asset('assets/Vector 16.png'),
                     ),
                   ),
                 ),
-
                 Positioned(
-                  top: height/8.45,
+                  top: height / 8.45,
                   right: 0,
-                  child:
-                  VisibilityDetector(
-
+                  child: VisibilityDetector(
                     key: Key('c1'),
                     onVisibilityChanged: (visibilityInfo) {
-                      var visiblePercentage = visibilityInfo.visibleFraction * 100;
+                      var visiblePercentage =
+                          visibilityInfo.visibleFraction * 100;
                       if (visiblePercentage > 38) {
                         setState(() {
                           c1 = true;
@@ -184,33 +178,31 @@ class _ProductGuideMState extends State<ProductGuideM> {
                     },
                     child: FadeInLeftBig(
                       child: Container(
-                        width: width/1.15,
+                        width: width / 1.15,
+
                         /// ---
                         child: Image.asset('assets/lap.png'),
                       ),
                     ),
                   ),
                 ),
-
                 Positioned(
-                  bottom: height/40.15,
-                  right: width/19.6,
-                  child:
-                  FadeInRightBig(
+                  bottom: height / 40.15,
+                  right: width / 19.6,
+                  child: FadeInRightBig(
                     child: Container(
-                      width: width/3.01,
+                      width: width / 3.01,
+
                       /// ---
                       child: Image.asset('assets/Nokia XR21 (1).png'),
                     ),
                   ),
                 ),
-
                 Positioned(
                   bottom: 0,
-                  left: width/19.6,
-                  child:
-                  Container(
-                    width: width/5.22,
+                  left: width / 19.6,
+                  child: Container(
+                    width: width / 5.22,
                     child: Image.asset('assets/Group 10.png'),
                   ),
                 ),
@@ -222,37 +214,41 @@ class _ProductGuideMState extends State<ProductGuideM> {
             children: [
               Container(
                 color: const Color(0xffF3F7FE),
-                height: height/2.50,
+                height: height / 2.50,
                 width: double.infinity,
                 child: Column(
                   children: [
                     Container(
-                      width: width/1.12,
+                      width: width / 1.12,
                       child: RichText(
                         textAlign: TextAlign.center,
                         text: TextSpan(
-
                           style: GoogleFonts.sofiaSans(
                             color: Colors.black,
                             fontSize: 25,
                           ),
                           children: <TextSpan>[
-                            TextSpan(text: 'We Have ',
-
-                                style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 25, wordSpacing: 1)),
+                            TextSpan(
+                                text: 'We Have ',
+                                style: GoogleFonts.sofiaSans(
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 25,
+                                    wordSpacing: 1)),
                             TextSpan(
                               text: 'Multiple Products ',
-
                               style: GoogleFonts.sofiaSans(
-                                  wordSpacing: 1,
+                                wordSpacing: 1,
                                 color: const Color(0xff1666AD),
                                 fontSize: 25,
                                 fontWeight: FontWeight.w800,
                               ),
                             ),
-                            TextSpan(text: 'Each With a Unique ', style: GoogleFonts.sofiaSans(
-                                wordSpacing: 1,
-                                fontWeight: FontWeight.w800, fontSize: 25)),
+                            TextSpan(
+                                text: 'Each With a Unique ',
+                                style: GoogleFonts.sofiaSans(
+                                    wordSpacing: 1,
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 25)),
                             TextSpan(
                               text: 'Solution ',
                               style: GoogleFonts.sofiaSans(
@@ -262,7 +258,6 @@ class _ProductGuideMState extends State<ProductGuideM> {
                                 color: const Color(0xff1666AD),
                               ),
                             ),
-
                             TextSpan(
                               text: 'To a problem',
                               style: GoogleFonts.sofiaSans(
@@ -272,42 +267,48 @@ class _ProductGuideMState extends State<ProductGuideM> {
                                 // color: Color(0xff1666AD),
                               ),
                             ),
-
                           ],
                         ),
                       ),
                     ),
-                     SizedBox(height: height/40.15,),
+                    SizedBox(
+                      height: height / 40.15,
+                    ),
                     Container(
                       width: 300,
                       child: Center(
-                        child: Text('We are a team of experienced personnel who find problems in our clients current systems and also provide business and technological solutions for them.',
+                        child: Text(
+                          'We are a team of experienced personnel who find problems in our clients current systems and also provide business and technological solutions for them.',
                           textAlign: TextAlign.center,
                           style: GoogleFonts.sofiaSans(
-                              color: const Color(0xff151515).withOpacity(0.7), fontSize: 16),
+                              color: const Color(0xff151515).withOpacity(0.7),
+                              fontSize: 16),
                         ),
                       ),
                     ),
-                     SizedBox(height: height/40.15,),
+                    SizedBox(
+                      height: height / 40.15,
+                    ),
+
                     /// Button
                     Padding(
                       padding: const EdgeInsets.only(),
                       child: NeoPopButton(
                         color: const Color(0xff1666AD),
                         onTapDown: () {
-                          Navigator.of(context).push(
-                              MaterialPageRoute(
-                                  builder: (context) => const ContactPageM()));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const ContactPageM()));
                         },
-
                         onTapUp: () {},
                         child: SizedBox(
-                          height: height/20.07,
-                          width: width/2.8,
+                          height: height / 20.07,
+                          width: width / 2.8,
                           child: Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              SizedBox(
+                                width: width / 36,
+                              ),
                               Text(
                                 "Trial Now",
                                 style: GoogleFonts.sofiaSans(
@@ -318,8 +319,7 @@ class _ProductGuideMState extends State<ProductGuideM> {
                               IconButton(
                                   onPressed: () {},
                                   icon: const Icon(
-
-                                    Icons.download_rounded,
+                                    Icons.archive_sharp,
                                     color: Color(0xffFFFFFF),
                                   ))
                             ],
@@ -327,7 +327,6 @@ class _ProductGuideMState extends State<ProductGuideM> {
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
@@ -340,21 +339,20 @@ class _ProductGuideMState extends State<ProductGuideM> {
               //   ),
               // ),
               Positioned(
-                top: height/2.86,
-                right: width/5.6,
+                top: height / 2.86,
+                right: width / 5.6,
                 child: SizedBox(
-                  width: width/39.2,
-                  child: Image.asset('assets/Ellipse 9.png', fit: BoxFit.contain),
+                  width: width / 39.2,
+                  child:
+                      Image.asset('assets/Ellipse 9.png', fit: BoxFit.contain),
                 ),
               ),
-
-
             ],
           ),
 
           /// Second Box
           Container(
-            height: height/2.11,
+            height: height / 2.11,
             child: Stack(
               alignment: Alignment.topCenter,
               children: [
@@ -365,13 +363,14 @@ class _ProductGuideMState extends State<ProductGuideM> {
                   ),
                 ),
                 Positioned(
-                  left: width/3.92,
-                  top: height/32.12,
+                  left: width / 3.92,
+                  top: height / 32.12,
                   child: Stack(
                     children: [
                       SizedBox(
-                        width: width/2.24,
-                        child: Image.asset('assets/lengthLogo.png', fit: BoxFit.contain),
+                        width: width / 2.24,
+                        child: Image.asset('assets/lengthLogo.png',
+                            fit: BoxFit.contain),
                       ),
                     ],
                   ),
@@ -382,21 +381,24 @@ class _ProductGuideMState extends State<ProductGuideM> {
                   child: Stack(
                     children: [
                       SizedBox(
-                        width: width/4.350,
-                        child: Image.asset('assets/Dot Ornament.png', fit: BoxFit.contain),
+                        width: width / 4.350,
+                        child: Image.asset('assets/Dot Ornament.png',
+                            fit: BoxFit.contain),
                       ),
                     ],
                   ),
                 ),
+
                 /// left ...
                 Positioned(
-                  left: width/15.68,
-                  top: height/8.920,
+                  left: width / 15.68,
+                  top: height / 8.920,
                   child: Stack(
                     children: [
                       SizedBox(
-                        width: width/26.13,
-                        child: Image.asset('assets/Ellipse 6 (1).png', fit: BoxFit.contain),
+                        width: width / 26.13,
+                        child: Image.asset('assets/Ellipse 6 (1).png',
+                            fit: BoxFit.contain),
                       ),
                     ],
                   ),
@@ -404,12 +406,13 @@ class _ProductGuideMState extends State<ProductGuideM> {
 
                 Positioned(
                   right: 0,
-                  top: height/40.15,
+                  top: height / 40.15,
                   child: Stack(
                     children: [
                       SizedBox(
-                        width: width/3.92,
-                        child: Image.asset('assets/rightdown.png', fit: BoxFit.contain),
+                        width: width / 3.92,
+                        child: Image.asset('assets/rightdown.png',
+                            fit: BoxFit.contain),
                       ),
                     ],
                   ),
@@ -417,13 +420,14 @@ class _ProductGuideMState extends State<ProductGuideM> {
 
                 Positioned(
                   // right: 0,
-                  top: height/5.73,
+                  top: height / 5.73,
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
                       SizedBox(
-                        width: width/1.56,
-                        child: Image.asset('assets/img1.png', fit: BoxFit.contain),
+                        width: width / 1.56,
+                        child:
+                            Image.asset('assets/img1.png', fit: BoxFit.contain),
                       ),
                     ],
                   ),
@@ -431,6 +435,7 @@ class _ProductGuideMState extends State<ProductGuideM> {
               ],
             ),
           ),
+
           /// Contenet
           Container(
             height: 350,
@@ -451,9 +456,11 @@ class _ProductGuideMState extends State<ProductGuideM> {
                     children: [
                       Column(
                         children: [
-                           SizedBox(height: height/40.15,),
+                          SizedBox(
+                            height: height / 40.15,
+                          ),
                           Container(
-                            width: width/1.12,
+                            width: width / 1.12,
                             child: RichText(
                               text: TextSpan(
                                 style: GoogleFonts.sofiaSans(
@@ -461,7 +468,11 @@ class _ProductGuideMState extends State<ProductGuideM> {
                                   fontSize: 25,
                                 ),
                                 children: <TextSpan>[
-                                  TextSpan(text: 'School ', style: GoogleFonts.sofiaSans(fontWeight: FontWeight.w800, fontSize: 25)),
+                                  TextSpan(
+                                      text: 'School ',
+                                      style: GoogleFonts.sofiaSans(
+                                          fontWeight: FontWeight.w800,
+                                          fontSize: 25)),
                                   TextSpan(
                                     text: 'Management System',
                                     style: GoogleFonts.sofiaSans(
@@ -470,52 +481,55 @@ class _ProductGuideMState extends State<ProductGuideM> {
                                       fontWeight: FontWeight.w800,
                                     ),
                                   ),
-
                                 ],
                               ),
                             ),
                           ),
-                           SizedBox(height: height/40.15,),
+                          SizedBox(
+                            height: height / 40.15,
+                          ),
                           Container(
-                            width: width/1.12,
+                            width: width / 1.12,
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 0),
-                              child: Text('Our school management software is a comprehensive solution designed to streamline administrative tasks and enhance communication within educational institutions. It offers features such as student enrollment and management, attendance tracking, gradebook management, scheduling, and parent-teacher communication.',
-
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 3, horizontal: 0),
+                              child: Text(
+                                'Our school management software is a comprehensive solution designed to streamline administrative tasks and enhance communication within educational institutions. It offers features such as student enrollment and management, attendance tracking, gradebook management, scheduling, and parent-teacher communication.',
                                 style: GoogleFonts.sofiaSans(
-                                    color: const Color(0xff151515).withOpacity(0.7), fontSize: 16),
-                              textAlign: TextAlign.center,
+                                    color: const Color(0xff151515)
+                                        .withOpacity(0.7),
+                                    fontSize: 16),
+                                textAlign: TextAlign.justify,
                               ),
                             ),
                           ),
-                           SizedBox(height: height/40.15,),
-                          Padding(
-                            padding: const EdgeInsets.only(),
-                            child: NeoPopButton(
-                              color: const Color(0xff1666AD),
-                              onTapDown: () {
-                                Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                        builder: (context) => Scaffold(body: const ContactPageM(),)));
-                              },
-                              onTapUp: () {},
-                              child: SizedBox(
-                                height: height/20.07,
-                                width: width/2.61,
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "View Details"
-                                          " ...",
-                                      style: GoogleFonts.sofiaSans(
-                                          color: const Color(0xffFFFFFF),
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                  ],
-                                ),
+                          SizedBox(
+                            height: height / 40.15,
+                          ),
+                          NeoPopButton(
+                            color: const Color(0xff1666AD),
+                            onTapDown: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => Scaffold(
+                                        body: const ContactPageM(),
+                                      )));
+                            },
+                            onTapUp: () {},
+                            child: SizedBox(
+                              height: height / 20.07,
+                              width: width / 2.61,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "View Details"
+                                    " ...",
+                                    style: GoogleFonts.sofiaSans(
+                                        color: const Color(0xffFFFFFF),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -525,69 +539,132 @@ class _ProductGuideMState extends State<ProductGuideM> {
                   ),
                 ),
                 Positioned(
-                  top: height/5.01,
-                  left: width/9.8,
+                  top: height / 5.01,
+                  left: width / 9.8,
                   child: SizedBox(
-                    width: width/1.30,
-                    child: Image.asset('assets/Group 73.png', fit: BoxFit.contain),
+                    width: width / 1.30,
+                    child:
+                        Image.asset('assets/Group 73.png', fit: BoxFit.contain),
                   ),
                 ),
               ],
             ),
           ),
 
-          ReusableProduct(blueW: 'Online Attendance ',blackW: 'System ',bigImage: 'assets/img2.png',digitalSolution: null,
-            content: 'The software automates the process of tracking attendance, eliminating the need for manual entry and reducing errors. Provides real-time visibility into attendance data, allowing administrators to monitor attendance remotely. It supports multiple access points, including web browsers, mobile apps, and biometric devices, for convenient attendance marking.',
-          rightImg: 'assets/Ellipse 9.png',
+          ReusableProduct(
+            blueW: 'Online Attendance ',
+            blackW: 'Management System ',
+            bigImage: 'assets/img2.png',
+            digitalSolution: null,
+            content:
+                'The software automates the process of tracking attendance, eliminating the need for manual '
+                'entry and reducing errors. Provides real-time visibility into attendance data,'
+                ' allowing administrators to monitor attendance remotely. It supports multiple access points,'
+                ' including web browsers, mobile apps, and biometric devices, for convenient attendance marking.',
+            rightImg: 'assets/Ellipse 9.png',
             leftImg: 'assets/Polygon 3 (1).png',
             dotImg: null,
+
           ),
-          ReusableProduct(blueW: 'Online Attendance ',blackW: 'System ',bigImage: 'assets/img3.png',digitalSolution: null,
-            content: 'The software automates the process of tracking attendance, eliminating the need for manual entry and reducing errors. Provides real-time visibility into attendance data, allowing administrators to monitor attendance remotely. It supports multiple access points, including web browsers, mobile apps, and biometric devices, for convenient attendance marking.',
+
+          ReusableProduct(
+            blueW: 'School',
+            blackW: ' Management System ',
+            bigImage: 'assets/img4.png',
+            digitalSolution: null,
+            content:
+                "Our school management software is a comprehensive solution designed to streamline administrative tasks and enhance communication within educational institutions. It offers features such as student enrollment and management, attendance tracking, gradebook management, scheduling, and parent-teacher communication.",
             rightImg: 'assets/Ellipse 9.png',
             leftImg: 'assets/Polygon 3 (1).png',
             dotImg: null,
           ),
-          ReusableProduct(blueW: 'Online Attendance ',blackW: 'System ',bigImage: 'assets/img4.png',digitalSolution: null,
-            content: 'The software automates the process of tracking attendance, eliminating the need for manual entry and reducing errors. Provides real-time visibility into attendance data, allowing administrators to monitor attendance remotely. It supports multiple access points, including web browsers, mobile apps, and biometric devices, for convenient attendance marking.',
+          ReusableProduct(
+            blueW: 'Visitor ',
+            blackW: 'Management System  ',
+            bigImage: 'assets/img5.png',
+            digitalSolution: null,
+            content:
+                "Visitor Management Software is a digital solution designed to streamline the process of registering, tracking, "
+                "and managing visitors in various environments, such as corporate offices, educational institutions, healthcare "
+                "facilities, and government buildings. It replaces traditional paper-based visitor logs with an efficient,"
+                " secure, and customisable.",
             rightImg: 'assets/Ellipse 9.png',
             leftImg: 'assets/Polygon 3 (1).png',
             dotImg: null,
           ),
-          ReusableProduct(blueW: 'School Management ',blackW: 'System ',bigImage: 'assets/img5.png',digitalSolution: null,
-            content: 'Our school management software is a comprehensive solution designed to streamline administrative tasks and enhance communication within educational institutions. It offers features such as student enrollment and management, attendance tracking, gradebook management, scheduling, and parent-teacher communication.',
+          ReusableProduct(
+            blueW: '  Church/Mosque     ',
+            blackW: 'Management System   ',
+            bigImage: 'assets/img6.png',
+            digitalSolution: null,
+            content:
+            'The hostel management software boasts an intuitive and user-friendly interface that simplifies the administrative tasks. With easy navigation and a clean layout, users can quickly access and manage information without extensive training.Store and manage detailed information about each student, including personal details, contact information, and academic records. ',
             rightImg: 'assets/Ellipse 9.png',
             leftImg: 'assets/Polygon 3 (1).png',
             dotImg: null,
           ),
-          ReusableProduct(blueW: 'Online Attendance ',blackW: 'System ',bigImage: 'assets/img6.png',digitalSolution: null,
-            content: 'The software automates the process of tracking attendance, eliminating the need for manual entry and reducing errors. Provides real-time visibility into attendance data, allowing administrators to monitor attendance remotely. It supports multiple access points, including web browsers, mobile apps, and biometric devices, for convenient attendance marking.',
+
+
+          ReusableProduct(
+            blueW: 'Alumini ',
+            blackW: 'Management System ',
+            bigImage: 'assets/img7.png',
+            digitalSolution: null,
+            content:"Alumni management software is a comprehensive digital solution designed to streamline and enhance "
+                "the management of alumni relations for educational institutions, corporations, and non-profit organizations. "
+                "This software offers a "
+                "range of features and functionalities tailored to meet the diverse needs of managing alumni networks effectively.",
             rightImg: 'assets/Ellipse 9.png',
             leftImg: 'assets/Polygon 3 (1).png',
             dotImg: null,
           ),
-          ReusableProduct(blueW: 'Visitor Management ',blackW: 'System ',bigImage: 'assets/img7.png',digitalSolution: null,
-            content: 'Visitor Management Software is a digital solution designed to streamline the process of registering, tracking, and managing visitors in various environments, such as corporate offices, educational institutions, healthcare facilities, and government buildings. It replaces traditional paper-based visitor logs with an efficient, secure, and customisable.',
+
+          ReusableProduct(
+            blueW: 'Asset ',
+            blackW: 'Management System  ',
+            bigImage: 'assets/img9.png',
+            digitalSolution: null,
+            content:"Asset management software plays a crucial role in efficiently organising, tracking, and maintaining physical "
+                "and digital assets within an organization. It provides a centralised platform for managing various types"
+                " of assets, offering functionalities for asset tracking, maintenance scheduling, depreciation tracking,"
+                " and reporting. Here's a brief overview, highlighting key features and benefits of asset management software.",
             rightImg: 'assets/Ellipse 9.png',
             leftImg: 'assets/Polygon 3 (1).png',
             dotImg: null,
           ),
-          ReusableProduct(blueW: 'Church/Mosque ',blackW: 'Management System ',bigImage: 'assets/img8.png',digitalSolution: null,
-            content: 'The hostel management software boasts an intuitive and user-friendly interface that simplifies the administrative tasks. With easy navigation and a clean layout, users can quickly access and manage information without extensive training.Store and manage detailed information about each student, including personal details, contact information, and academic records. ',
-            rightImg: 'assets/Ellipse 9.png',
+          ReusableProduct(
+            blueW: 'Society ',
+            blackW: 'Management System ',
+            bigImage: 'assets/img11.png',
+            digitalSolution: null,
+             content: "Society Management Software is a comprehensive digital solution designed to streamline and automate the "
+                 "management of residential communities, housing societies, condominiums, and similar shared living spaces."
+                 " It serves as a centralised platform to facilitate efficient communication, administrative tasks,"
+                 " and resource management within these communities.",
+             rightImg: 'assets/Ellipse 9.png',
             leftImg: 'assets/Polygon 3 (1).png',
             dotImg: null,
           ),
-          ReusableProduct(blueW: 'Alumni Management ',blackW: 'System ',bigImage: 'assets/img9.png',digitalSolution: null,
-            content: 'The software automates the process of tracking attendance, eliminating the need for manual entry and reducing errors. Provides real-time visibility into attendance data, allowing administrators to monitor attendance remotely. It supports multiple access points, including web browsers, mobile apps, and biometric devices, for convenient attendance marking.',
-            rightImg: 'assets/Ellipse 9.png',
+
+          ReusableProduct(
+            blueW: 'Hostel ',
+            blackW: 'Management System  ',
+            bigImage: 'assets/img9.png',
+            digitalSolution: null,
+          content: "The hostel management software boasts an intuitive and user-friendly interface that simplifies the "
+              "administrative tasks. With easy navigation and a clean layout, users can quickly access and manage information"
+              " without extensive training.Store and manage"
+              " detailed information about each student, including personal details, contact information, and academic records. ",
+           rightImg: 'assets/Ellipse 9.png',
             leftImg: 'assets/Polygon 3 (1).png',
             dotImg: null,
           ),
+
+
           /// End...
 
           Container(
-            height: height/5.01,
+            height: height / 5.01,
             child: Stack(
               alignment: Alignment.topCenter,
               children: [
@@ -598,37 +675,40 @@ class _ProductGuideMState extends State<ProductGuideM> {
                   ),
                 ),
                 Positioned(
-                  left: width/15.68,
+                  left: width / 15.68,
                   top: 0,
                   child: Stack(
                     children: [
                       SizedBox(
-                        width: width/4.9,
-                        child: Image.asset('assets/Group 10 (4).png', fit: BoxFit.contain),
+                        width: width / 4.9,
+                        child: Image.asset('assets/Group 10 (4).png',
+                            fit: BoxFit.contain),
                       ),
                     ],
                   ),
                 ),
                 Positioned(
-                  right: width/7.840,
+                  right: width / 7.840,
                   top: 0,
                   child: Stack(
                     children: [
                       SizedBox(
-                        width: width/39.2,
-                        child: Image.asset('assets/Ellipse 6 (1).png', fit: BoxFit.contain),
+                        width: width / 39.2,
+                        child: Image.asset('assets/Ellipse 6 (1).png',
+                            fit: BoxFit.contain),
                       ),
                     ],
                   ),
                 ),
                 Positioned(
-                  right: width/5.225,
-                  top: height/26.76,
+                  right: width / 5.225,
+                  top: height / 26.76,
                   child: Stack(
                     children: [
                       SizedBox(
-                        width: width/7.84,
-                        child: Image.asset('assets/Vector 3 (1).png', fit: BoxFit.contain),
+                        width: width / 7.84,
+                        child: Image.asset('assets/Vector 3 (1).png',
+                            fit: BoxFit.contain),
                       ),
                     ],
                   ),
@@ -639,8 +719,9 @@ class _ProductGuideMState extends State<ProductGuideM> {
                   child: Stack(
                     children: [
                       SizedBox(
-                        width: width/3.01,
-                        child: Image.asset('assets/Dot Ornament.png', fit: BoxFit.contain),
+                        width: width / 3.01,
+                        child: Image.asset('assets/Dot Ornament.png',
+                            fit: BoxFit.contain),
                       ),
                     ],
                   ),
@@ -648,6 +729,7 @@ class _ProductGuideMState extends State<ProductGuideM> {
               ],
             ),
           ),
+
           /// footer
           FooterMobile()
         ],

@@ -470,7 +470,7 @@ class _ProductGuideState extends State<ProductGuide> {
                                 "The Constituency Management System (CMS) is a comprehensive "
                                 "software solution designed to streamline the management and communication"
                                 " processes within a political constituency. This system "
-                                "facilitates efficient constituent engagement, enabling representatives"
+                                "facilitates efficient constituent engagemFent, enabling representatives"
                                 " to effectively address citizen concerns,"
                                 " manage public affairs, and coordinate various administrative tasks.",
                                 style: GoogleFonts.sofiaSans(

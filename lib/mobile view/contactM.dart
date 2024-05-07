@@ -914,202 +914,10 @@ class _ContactPageMState extends State<ContactPageM> {
                     ),
                   ),
                   SizedBox(
-                    height: height / 32.05,
+                    height: height / 75.4,
                   ),
                   AnimatedContainer(
-                    height:  con2 == true ? height/4.01 : height/11.47,
-                    duration: const Duration(milliseconds: 600),
-                    child: Stack(
-                      alignment: Alignment.topCenter,
-                      children: [
-                        Positioned.fill(
-                          child: Image.asset(
-                            'assets/bigBox.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Positioned(
-                          child:
-                          Container(
-                            height:  con2 == true
-                                ?  height/4.46 : height/11.47,
-                            width: width/1.12,
-                            color: Color(0xff1666AD),
-                            child: ListTile(
-                                title: Row(
-                                  children: [
-                                    Container(
-                                      width: width/1.4,
-                                      child: Text('How can a hostel management software benefit our facility?',
-                                        style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
-                                      ),
-                                    ),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-
-                                        con2 == true
-                                            ?
-
-                                        InkWell(
-                                          onTap: (){
-                                            setState(() {
-                                              con2 = !con2;
-                                            });
-                                          },
-                                          child: CircleAvatar(
-                                            radius: 12,
-                                            backgroundColor: const Color(0xffFFFFFF),
-                                            child: Image.asset(
-                                              "assets/Group 10 (5).png",
-                                            ),
-                                          ),
-                                        ) :
-                                        InkWell(
-                                          onTap: (){
-                                            setState(() {
-                                              con2 = !con2;
-                                            });
-                                          },
-                                          child: CircleAvatar(
-                                            radius: 12,
-                                            backgroundColor: const Color(0xffFFFFFF),
-                                            child: Image.asset(
-                                              "assets/Group 10 (6).png",
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                subtitle:     con2 == true
-                                    ?
-                                Padding(
-                                  padding:  EdgeInsets.only(top: height/100.37),
-                                  child: Text('A hostel management software simplifies tasks like room allocation, check-ins/check-outs, billing, and inventory. It boosts efficiency, minimizes errors, and enhances guest satisfaction.',
-                                    style: GoogleFonts.sofiaSans(
-                                        fontSize: 14.3,
-                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
-                                  ),
-                                ) :
-                                Padding(
-                                  padding:  EdgeInsets.only(top: height/100.37),
-                                  child: Text('',
-                                    style: GoogleFonts.sofiaSans(
-                                        fontSize: 14.3,
-                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
-                                  ),
-                                )
-
-                            ),
-                          ),
-                        ),
-
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: height / 32.05,
-                  ),
-                  AnimatedContainer(
-                    height:  con3 == true ? height/4.01 : height/11.47,
-                    duration: const Duration(milliseconds: 600),
-                    child: Stack(
-                      alignment: Alignment.topCenter,
-                      children: [
-                        Positioned.fill(
-                          child: Image.asset(
-                            'assets/bigBox.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Positioned(
-                          child:
-                          Container(
-                            height:  con3 == true
-                                ?  height/4.46 : height/11.47,
-                            width: width/1.12,
-                            color: Color(0xff1666AD),
-                            child: ListTile(
-                                title: Row(
-                                  children: [
-                                    Container(
-                                      width: width/1.4,
-                                      child: Text('How can a hostel management software benefit our facility?',
-                                        style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
-                                      ),
-                                    ),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-
-                                        con3 == true
-                                            ?
-
-                                        InkWell(
-                                          onTap: (){
-                                            setState(() {
-                                              con3 = !con3;
-                                            });
-                                          },
-                                          child: CircleAvatar(
-                                            radius: 12,
-                                            backgroundColor: const Color(0xffFFFFFF),
-                                            child: Image.asset(
-                                              "assets/Group 10 (5).png",
-                                            ),
-                                          ),
-                                        ) :
-                                        InkWell(
-                                          onTap: (){
-                                            setState(() {
-                                              con3 = !con3;
-                                            });
-                                          },
-                                          child: CircleAvatar(
-                                            radius: 12,
-                                            backgroundColor: const Color(0xffFFFFFF),
-                                            child: Image.asset(
-                                              "assets/Group 10 (6).png",
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                subtitle:     con3 == true
-                                    ?
-                                Padding(
-                                  padding:  EdgeInsets.only(top: height/100.37),
-                                  child: Text('A hostel management software simplifies tasks like room allocation, check-ins/check-outs, billing, and inventory. It boosts efficiency, minimizes errors, and enhances guest satisfaction.',
-                                    style: GoogleFonts.sofiaSans(
-                                        fontSize: 14.3,
-                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
-                                  ),
-                                ) :
-                                Padding(
-                                  padding:  EdgeInsets.only(top: height/100.37),
-                                  child: Text('',
-                                    style: GoogleFonts.sofiaSans(
-                                        fontSize: 14.3,
-                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
-                                  ),
-                                )
-
-                            ),
-                          ),
-                        ),
-
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: height / 32.05,
-                  ),
-                  AnimatedContainer(
-                    height:  con4 == true ? height/4.01 : height/11.47,
+                    height:  con4 == true ? height/3.27 : height/11.47,
                     duration: const Duration(milliseconds: 600),
                     child: Stack(
                       alignment: Alignment.topCenter,
@@ -1124,7 +932,7 @@ class _ContactPageMState extends State<ContactPageM> {
                           child:
                           Container(
                             height:  con4 == true
-                                ?  height/4.46 : height/11.47,
+                                ?  height/3.59 : height/11.47,
                             width: width/1.12,
                             color: Color(0xff1666AD),
                             child: ListTile(
@@ -1132,7 +940,7 @@ class _ContactPageMState extends State<ContactPageM> {
                                   children: [
                                     Container(
                                       width: width/1.4,
-                                      child: Text('How can a hostel management software benefit our facility?',
+                                      child: Text( "What features does the mosque management software offer?",
                                         style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
                                       ),
                                     ),
@@ -1178,10 +986,218 @@ class _ContactPageMState extends State<ContactPageM> {
                                 subtitle:     con4 == true
                                     ?
                                 Padding(
+                                  padding:  EdgeInsets.only(top: 0),
+                                  child: Text(
+                                    "Mosque management offers a range of features and services to its community. "
+                                        "This includes organizing and managing prayer services such as the five daily prayers, "
+                                        "Friday prayers (Jumu'ah), and special prayers like Tarawih during Ramadan."
+                                        " In addition to facilitating worship, mosques provide religious"
+                                        " education through Quranic studies, hadith, "
+                                        "and Islamic jurisprudence classes for different age groups.",
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 12,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                ) :
+                                Padding(
                                   padding:  EdgeInsets.only(top: height/100.37),
-                                  child: Text('A hostel management software simplifies tasks like room allocation, check-ins/check-outs, billing, and inventory. It boosts efficiency, minimizes errors, and enhances guest satisfaction.',
+                                  child: Text('',
                                     style: GoogleFonts.sofiaSans(
                                         fontSize: 14.3,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                )
+
+                            ),
+                          ),
+                        ),
+
+                      ],
+                    ),
+                  ),
+
+                  SizedBox(
+                    height: height / 75.4,
+                  ),
+                  AnimatedContainer(
+                    height:  con3 == true ? height/3.27 : height/9.42,
+                    duration: const Duration(milliseconds: 600),
+                    child: Stack(
+                      alignment: Alignment.topCenter,
+                      children: [
+                        Positioned.fill(
+                          child: Image.asset(
+                            'assets/bigBox.png',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Positioned(
+                          child:
+                          Container(
+                            height:  con3 == true
+                                ?  height/3.42 :height/9.42,
+                            width: width/1.12,
+                            color: Color(0xff1666AD),
+                            child: ListTile(
+                                title: Row(
+                                  children: [
+                                    Container(
+                                      width: width/1.4,
+                                      child: Text(  "Is the software user-friendly for administrators who may not be tech-savvy?",
+                                        style: GoogleFonts.sofiaSans(
+
+                                            color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+
+                                        con3 == true
+                                            ?
+
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con3 = !con3;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (5).png",
+                                            ),
+                                          ),
+                                        ) :
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con3 = !con3;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (6).png",
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                subtitle:     con3 == true
+                                    ?
+                                Padding(
+                                  padding:  EdgeInsets.only(top:0),
+                                  child: Text("Yes, all of our software systems are designed to be user-friendly even for those who are not tech-savvy."
+                                      " They often feature intuitive interfaces with clear navigation and simple instructions. "
+                                      "These systems may also offer training or support to help users become more comfortable with the software. "
+                                      "The goal is to ensure ease of use and efficient management for the community.",
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 12,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                ) :
+                                Padding(
+                                  padding:  EdgeInsets.only(top: height/100.37),
+                                  child: Text('',
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 14.3,
+                                        color: Color(0xffFFFFFF).withOpacity(0.8)),
+                                  ),
+                                )
+
+                            ),
+                          ),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: height / 75.4,
+                  ),
+                  AnimatedContainer(
+                    height:  con2 == true ? 250 : height/9.42,
+                    duration: const Duration(milliseconds: 600),
+                    child: Stack(
+                      alignment: Alignment.topCenter,
+                      children: [
+                        Positioned.fill(
+                          child: Image.asset(
+                            'assets/bigBox.png',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Positioned(
+                          child:
+                          Container(
+                            height:  con2 == true
+                                ?   250 : height/9.42,
+                            width: width/1.12,
+                            color: Color(0xff1666AD),
+                            child: ListTile(
+                                title: Row(
+                                  children: [
+                                    Container(
+                                      width: width/1.4,
+                                      child: Text( "How secure is the data stored in the church management software?",
+                                        style: GoogleFonts.sofiaSans(color: Color(0xffFFFFFF), fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+
+                                        con2 == true
+                                            ?
+
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con2 = !con2;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (5).png",
+                                            ),
+                                          ),
+                                        ) :
+                                        InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              con2 = !con2;
+                                            });
+                                          },
+                                          child: CircleAvatar(
+                                            radius: 12,
+                                            backgroundColor: const Color(0xffFFFFFF),
+                                            child: Image.asset(
+                                              "assets/Group 10 (6).png",
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                subtitle:     con2 == true
+                                    ?
+                                Padding(
+                                  padding:  EdgeInsets.only(top: 0),
+                                  child: Text( "Church management systems secure data using encryption for both data in transit and at rest, "
+                                      "ensuring it remains protected. Access control methods, such as role-based permissions and"
+                                      " multi-factor authentication, limit access to authorized personnel. Regular data backups help maintain "
+                                      "data integrity and guard against loss. Firewalls and adherence to data protection regulations further"
+                                      " safeguard the system from unauthorized access and external threats.",
+                                    style: GoogleFonts.sofiaSans(
+                                        fontSize: 12,
                                         color: Color(0xffFFFFFF).withOpacity(0.8)),
                                   ),
                                 ) :
